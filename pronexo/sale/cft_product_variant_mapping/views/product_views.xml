@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	<record id="variant_mapping_manual_action_client"
+		model="ir.actions.client">
+		<field name="name">Rearrange Variants</field>
+		<field name="tag">variant_rearrange_screen</field>
+		<field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="binding_type">action</field>
+	</record>
+	
+	<record id="variant_mapping_action_client"
+		model="ir.actions.client">
+		<field name="name">Rearrange Variants</field>
+		<field name="tag">variant_rearrange_screen</field>
+		<field name="res_model">product.template</field>
+		<field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="binding_type">action</field>
+	</record>
+
+
+	<!-- view used for product.template only -->
+	<record model="ir.ui.view"
+		id="product_form_view_variant_mapping_button">
+		<field name="name">product.template.variant.mapping</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id"
+			ref="product.product_template_only_form_view" />
+		<field name="arch" type="xml">
+			<data>
+				<div name="button_box" position="inside">
+	                <button class="oe_stat_button"
+						name="open_variant_mapping" string="Rearrange Varinats" type="object">
+					</button>
+	            </div>
+			</data>
+		</field>
+	</record>
+	
+	<menuitem id="menu_product_maapping" name="Rearrange Variants" parent="sale.product_menu_catalog" action="variant_mapping_action_client" sequence="2" groups="product.group_product_variant"/>
+	
+</data>
+</odoo>

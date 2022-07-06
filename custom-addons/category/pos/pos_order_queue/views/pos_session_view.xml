@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Inherit Partner for ABU Sales -->
+		<!-- <record id="posorder_queue_session_form_view_inherit" model="ir.ui.view">
+			<field name="name">posorder.queue.form.view.inherit</field>
+			<field name="model">pos.session</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_session_form" />
+			<field name="priority" eval="3" />
+			<field name="arch" type="xml">
+				<button name="open_cashbox" position="before">
+					<button type="object" name="action_view_temp" class="oe_stat_button" icon="fa-pencil-square-o" attrs="{'invisible': [('temp_count', '=', 0)]}" groups="base.group_user">
+                        <field name="temp_count" widget="statinfo" string="Pending"/>
+                    </button>
+				</button>
+			</field>
+		</record> -->
+	</data>
+</odoo>

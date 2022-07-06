@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_product_pricelist_image" inherit_id="product_pricelist_direct_print.report_product_pricelist_document">
+    	        <xpath expr="//table/tr[0]/th" position="after">
+    	        	<th>imagen</th>
+    	        </xpath>
+  
+    </template>
+
+</odoo>
+

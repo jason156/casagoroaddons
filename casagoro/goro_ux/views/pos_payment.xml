@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="pos_payment_search" model="ir.ui.view">
+		<field name="name">pos.payment.search</field>
+		<field name="model">pos.payment</field>
+		<field name="inherit_id" ref="point_of_sale.view_pos_payment_search"/>
+		<field name="arch" type="xml">
+			<field name="name" position="after">
+				<field name="crm_team_id"/>
+			</field>
+		</field>
+	</record>
+</odoo>

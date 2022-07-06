@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_price_wiz_form" model="ir.ui.view">
+        <field name="name">product_price_wiz.form</field>
+        <field name="model">product.price_wiz</field>
+        <field name="arch" type="xml">
+            <form string="description">
+                <header/>
+                <sheet>
+                    <h1>
+                        <field name="product_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,}" readonly="True"/>
+                        <span>$ </span>
+                        <field name="actual_price"/>
+                    </h1>
+                    <group col="6">
+                        <field name="seller_price" readonly="True"/>
+                        <field name="sale_price_percent"/>
+                        <field name="list_price"/>
+                    </group>
+                    <group>
+                        <span>
+                            <field name="line_ids" options="{'no_create': True}">
+                                <tree create="0" editable="bottom" string="Pricelist Items">
+                                    <field name="pricelist_id"/>
+                                    <field name="default_percent"/>
+                                    <field name="min_quantity"/>
+                                    <field name="fixed_price" string="Price"/>
+                                    <field name="actual_price" string="Actual"/>
+                                    <field invisible="True" name="seller_price"/>
+                                </tree>
+                            </field>
+                        </span>
+                    </group>
+                    <footer>
+                        <button name="action_dummie" string="Actualizar Precios" type="object"/>
+                        <button class="btn-default" special="cancel" string="Cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_product_price_wiz" model="ir.actions.act_window">
+        <field name="name">price wiz</field>
+        <field name="res_model">product.price_wiz</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <record id="product_template_form" model="ir.ui.view">
+        <field name="name">product_template.form</field>
+        <field name="model">product.template</field>
+        <field name="priority">3</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <field invisible="True" name="price_ok"/>
+                <button attrs="{'invisible': [('price_ok', '=', True)]}" class="oe_stat_button btn-danger" context="{'default_product_id': id}" icon="fa-cogs" name="%(action_product_price_wiz)d" string="Precios desactualizados" style="background-color:red;" type="action"/>
+                <button attrs="{'invisible': [('price_ok', '=', False)]}" class="oe_stat_button" context="{'default_product_id': id}" icon="fa-cogs" name="%(action_product_price_wiz)d" string="Precios" type="action"/>
+            </div>
+            <field name="list_price" position="attributes">
+                <attribute name="readonly">True</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="product_template_search_view" model="ir.ui.view">
+        <field name="name">product.template.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <filter name="services" position="after">
+                <filter domain="[('price_ok','=',False)]" name="price_no_ok" string="Precio sin actualizar"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

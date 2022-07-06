@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--============================ Ajax Add to Cart js Files =======================-->
+    <template id="ajax_add_to_cart_optional" inherit_id="website.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/emipro_theme_sale_product_configurator/static/src/js/frontend/ajax_cart.js"/>
+        </xpath>
+    </template>
+
+</odoo>

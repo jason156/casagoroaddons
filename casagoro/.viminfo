@@ -1,0 +1,44 @@
+# Vim 8.0 generó este archivo "viminfo".
+# Puede editarlo, ¡sólo si tiene cuidado!
+
+# Viminfo version
+|1,4
+
+# Valor de 'encoding' cuando se escribió este archivo
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Historia de Línea de órdenes (de lo más nuevo a lo más antiguo):
+:wq
+|2,0,1639757109,,"wq"
+
+# Historia de Cadena de búsqueda (de lo más nuevo a lo más antiguo):
+
+# Historia de Expresión (de lo más nuevo a lo más antiguo):
+
+# Historia de Línea de entrada (de lo más nuevo a lo más antiguo):
+
+# Historia de Debug Line (de lo más nuevo a lo más antiguo):
+
+# Registros:
+
+# Marcas en el archivo:
+'0  9  14  /home/pronexo/restart.py
+|4,48,9,14,1639757109,"/home/pronexo/restart.py"
+
+# Lista de saltos (el más reciente va primero):
+-'  9  14  /home/pronexo/restart.py
+|4,39,9,14,1639757109,"/home/pronexo/restart.py"
+-'  1  0  /home/pronexo/restart.py
+|4,39,1,0,1639757091,"/home/pronexo/restart.py"
+
+# Historia de las marcas en los archivos (de la más reciente a la más antigua):
+
+> /home/pronexo/restart.py
+	*	1639757107	0
+	"	9	14
+	^	9	15
+	.	9	14
+	+	9	14

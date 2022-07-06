@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_distribute_stock_distribute,stock_distribute.stock_distribute,model_stock_distribute,base.group_user,1,1,1,1
+access_stock_distribute_stock_distribute_item,stock_distribute.stock_distribute_item,model_stock_distribute_item,base.group_user,1,1,1,1

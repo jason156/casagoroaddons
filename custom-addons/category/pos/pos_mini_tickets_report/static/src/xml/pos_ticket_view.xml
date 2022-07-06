@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="point_of_sale.template" xml:space="preserve">
+    <t t-extend="Chrome">
+        <t t-jquery='.pos-branding' t-operation='replace'>
+             <img src='/web/binary/company_logo' style="width: 3%;padding: 2px 8px 0px 13px;float: left;"/>
+             <span class="placeholder-UsernameWidget" style="float: left;padding-top: 19px;color: #fff;"></span>
+        </t>
+    </t>
+
+    <t t-extend="OrderReceipt">
+        <t t-jquery='.pos-receipt' t-operation='replace'>
+            <t t-set='list_product_final' t-value='[]'/>
+            <t t-set='list_product_final_from_js' t-value='[]'/>
+            <t t-set='table_name' t-value=''/>
+
+            <div class="pos-receipt">
+                <t t-if='receipt.company.logo'>
+                    <img class="pos-receipt-logo" t-att-src='receipt.company.logo' alt="Logo"/>
+                    <br/>
+                </t>
+                <t t-if='!receipt.company.logo'>
+                    <h2 class="pos-receipt-center-align">
+                        <t t-esc='receipt.company.name' />
+                    </h2>
+                    <br/>
+                </t>
+                <div class="pos-receipt-contact">
+                    <t t-if='receipt.company.contact_address'>
+                        <div><t t-esc='receipt.company.contact_address' /></div>
+                    </t>
+                    <t t-if='receipt.company.phone'>
+                        <div>Tel:<t t-esc='receipt.company.phone' /></div>
+                    </t>
+                    <t t-if='receipt.company.vat'>
+                        <div>RFC:<t t-esc='receipt.company.vat' /></div>
+                    </t>
+                    <t t-if='receipt.company.email'>
+                        <div><t t-esc='receipt.company.email' /></div>
+                    </t>
+                    <t t-if='receipt.company.website'>
+                        <div><t t-esc='receipt.company.website' /></div>
+                    </t>
+                    <t t-if='receipt.header_html'>
+                        <t t-raw='receipt.header_html' />
+                    </t>
+                    <t t-if='!receipt.header_html and receipt.header'>
+                        <div><t t-esc='receipt.header' /></div>
+                    </t>
+                    <t t-if='receipt.cashier'>
+                        <div class='cashier'>
+                            <div>--------------------------------</div>
+                            <div>Atendido por <t t-esc='receipt.cashier' /></div>
+                        </div>
+                    </t>
+                </div>
+                <br /><br />
+
+                <!-- Orderlines -->
+
+                <div class='orderlines'>
+                    <t t-foreach='receipt.orderlines' t-as='line'>
+                        <t t-set='simple' t-value='(line.discount === 0 and line.unit_name === "Units" and line.quantity === 1 and !discount_to_show and !(line.display_discount_policy == "without_discount" &amp;&amp; line.price != line.price_lst))' />
+                        <t t-if='simple'>
+                            <div>
+                                <t t-esc='line.product_name_wrapped[0]' />
+                                <span t-esc='widget.format_currency_no_symbol(line.price_display)' class="price_display pos-receipt-right-align"/>
+                            </div>
+                            <t t-call="OrderReceiptWrappedProductNameLines"/>
+                        </t>
+                        <t t-if='!simple'>
+                            <div t-esc='line.product_name_wrapped[0]'/>
+                            <t t-call="OrderReceiptWrappedProductNameLines"/>
+                            <t t-if="line.display_discount_policy == 'without_discount' &amp;&amp; line.price != line.price_lst">
+                                <div class="pos-receipt-left-padding">
+                                    <t t-esc="widget.format_currency_no_symbol(line.price_lst)" />
+                                    ->
+                                    <t t-esc="widget.format_currency_no_symbol(line.price)" />
+                                </div>
+                            </t>
+                            <t t-elif='line.discount !== 0'>
+                                <div class="pos-receipt-left-padding">
+                                    <t t-if="pos.config.iface_tax_included === 'total'">
+                                        <t t-esc="widget.format_currency_no_symbol(line.price_with_tax_before_discount)"/>
+                                    </t>
+                                    <t t-else="">
+                                        <t t-esc="widget.format_currency_no_symbol(line.price)"/>
+                                    </t>
+                                </div>
+                            </t>
+                            <t t-if='line.discount !== 0'>
+                                <div class="pos-receipt-left-padding">
+                                    Descuento: <t t-esc='line.discount' />%
+                                </div>
+                            </t>
+                            <div class="pos-receipt-left-padding">
+                                <t t-esc="Math.round(line.quantity * Math.pow(10, pos.dp['Product Unit of Measure'])) / Math.pow(10, pos.dp['Product Unit of Measure'])"/>
+                                <t t-if='line.unit_name !== "Units"' t-esc='line.unit_name'/>
+                                x
+                                <t t-esc='widget.format_currency_no_symbol(line.price_display_one)' />
+                                <span class="price_display pos-receipt-right-align">
+                                    <t t-esc='widget.format_currency_no_symbol(line.price_display)'/>
+                                </span>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+
+                <!-- Subtotal -->
+
+                <t t-set='taxincluded' t-value='Math.abs(receipt.subtotal - receipt.total_with_tax) &lt;= 0.000001' />
+                <t t-if='!taxincluded'>
+                    <div class="pos-receipt-right-align">--------</div>
+                    <br/>
+                    <div>Subtotal<span t-esc='widget.format_currency(receipt.subtotal)' class="pos-receipt-right-align"/></div>
+                    <t t-foreach='receipt.tax_details' t-as='tax'>
+                        <div>
+                            <t t-esc='tax.name' />
+                            <span t-esc='widget.format_currency_no_symbol(tax.amount)' class="pos-receipt-right-align"/>
+                        </div>
+                    </t>
+                </t>
+
+                <!-- Total -->
+                <div class="pos-receipt-right-align">--------</div>
+                <br/>
+                <div class="pos-receipt-amount">
+                    TOTAL
+                    <span t-esc='widget.format_currency(receipt.total_with_tax)' class="pos-receipt-right-align"/>
+                </div>
+                <br/><br/>
+
+                <!-- Payment Lines -->
+
+                <t t-foreach='paymentlines' t-as='line'>
+                    <div>
+                        <t t-esc='line.name' />
+                        <span t-esc='widget.format_currency_no_symbol(line.get_amount())' class="pos-receipt-right-align"/>
+                    </div>
+                </t>
+                <br/>
+
+                <div class="pos-receipt-amount receipt-change">
+                    Cambio
+                    <span t-esc='widget.format_currency(receipt.change)' class="pos-receipt-right-align"/>
+                </div>
+                <br/>
+
+                <!-- Extra Payment Info -->
+
+                <t t-if='receipt.total_discount'>
+                    <div>
+                        Descuentos
+                        <span t-esc='widget.format_currency(receipt.total_discount)' class="pos-receipt-right-align"/>
+                    </div>
+                </t>
+                <t t-if='taxincluded'>
+                    <t t-foreach='receipt.tax_details' t-as='tax'>
+                        <div>
+                            <t t-esc='tax.name' />
+                            <span t-esc='widget.format_currency_no_symbol(tax.amount)' class="pos-receipt-right-align"/>
+                        </div>
+                    </t>
+                    <div>
+                        Impuestos
+                        <span t-esc='widget.format_currency(receipt.total_tax)' class="pos-receipt-right-align"/>
+                    </div>
+                </t>
+
+                <div class='before-footer' />
+
+                <!-- Footer -->
+                <div t-if='receipt.footer_html'  class="pos-receipt-center-align">
+                    <t t-raw='receipt.footer_html'/>
+                </div>
+
+                <div t-if='!receipt.footer_html and receipt.footer'  class="pos-receipt-center-align">
+                    <br/>
+                    <t t-esc='receipt.footer'/>
+                    <br/>
+                    <br/>
+                </div>
+
+                <div class='after-footer'>
+                    <t t-foreach='paymentlines' t-as='line'>
+                        <t t-if='line.ticket'>
+                            <br />
+                            <div class="pos-payment-terminal-receipt">
+                                <t t-raw='line.ticket'/>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+
+                <br/>
+                <div class="pos-receipt-order-data">
+                    <div><t t-esc='receipt.name' /></div>
+                    <div><t t-esc='receipt.date.localestring' /></div>
+                </div>
+            
+                <!-- Guardamos la lista de las Lineas de la Venta -->
+                <t t-set='list_product_final' t-value='receipt.orderlines'/>
+                <!-- Guardamos eñ nombre de la Mesa -->
+                <t t-set='table_name' t-value='widget.pos.get_table_name(widget.table)'/>
+                <tr t-foreach="receipt.orderlines" t-as="product_order">
+                    <t t-foreach="widget.pos.get_number_return_list(product_order.quantity)" t-as="qty_loop">
+                            <t t-set='list_product_final_from_js' t-value='widget.pos.append_list_array(list_product_final_from_js,product_order.product_name_wrapped[0], qty_loop)'/>
+                    </t>
+                </tr>
+
+            </div>
+            <!-- Separamos los recuadros en tickets independientes utilizando una varibale manual-->
+            <!-- Utilizamos la Metodologia de Registros Manuales para que se ajuste al estilo CSS -->
+            <!-- De las 4 soluciones es la mas apegada a los estilos y respeta el loop para separar las cantidades aunque tiene un proceso mas en el ticket anterior -->
+            
+            <!-- Generamos un Loop de datos para generar pequeñas paginas para que la maquina las pueda cortar con detalle individual por producto-->
+            <tr t-foreach="list_product_final_from_js" t-as="product_val_list">
+
+                <div class="page">
+                     <p style="page-break-after:always;">   </p>
+                       <div class="pos-sale-ticket-individ">
+                            <div>
+                                <table name="products_detail">
+                                    <td>
+
+                                        <!-- <div style="width:100%; overflow: hidden;padding: 5px 0px;border-radius: 30px;text-align: center;border: 1px solid #ddd; margin:10px auto;"> -->
+                                        <div style="width:100%; overflow: hidden;padding: 0px 25px;text-align: center;border: 1px solid #ddd;">
+                                           <br/>
+                                           <t t-esc="product_val_list[0]"/> 
+                                           <br/>
+                                            <t t-esc="'Cant.:' + widget.pos.get_number_return_string(product_val_list[1])"/> 
+                                            <t t-esc="'MESA: '+table_name"/>
+                                            <br/>
+                                        </div>
+
+                                    </td>
+                                </table>
+                            </div>
+                       </div>
+                </div>
+            </tr>
+
+            <script>
+            var arr = [];
+            i = 0;
+            $('.pr').each(function()
+            {
+                var x = $(this).text();
+                var y = Number(x).toFixed(2);
+                $(this).text(y);
+
+            });
+
+                        var regex = /[+-]?\\d+(?:\\.\\d+)?/g;          
+ 
+                        $('.qty_f').each(function()
+                        {
+                        var x = $(this).text();
+                        var match;
+                        while (match = regex.exec(x)) {
+                        var new_m = Number(match[0]).toFixed(2).toString();
+                        var res = x.replace(match[0], new_m);
+                        $(this).text(res);
+            }
+            });
+         </script>
+
+        </t>
+    </t>
+</templates>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sc_rank_view_partner_form" model="ir.ui.view">
+        <field name="name">sc.rank.res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <field name="supplier_rank" invisible="1"/>
+                    <field name="customer_rank" invisible="1"/>
+                    <button name="set_as_customer" type="object"
+                            string="set as customer" class="oe_highlight" attrs="{'invisible': [('customer_rank', '=', 1)]}"/>
+                     <button name="set_as_vendor" type="object"
+                            string="set as vendor" class="oe_highlight" attrs="{'invisible': [('supplier_rank', '=', 1)]}"/>
+                     <field name="supplier_rank" invisible="1"/>
+                     <field name="customer_rank" invisible="1"/>
+                     <button name="set_notas_customer" type="object"
+                            string="set not as customer" attrs="{'invisible': [('customer_rank', '=', 0)]}"/>
+                    <button name="set_notas_vendor" type="object"
+                            string="set not as vendor" attrs="{'invisible': [('supplier_rank', '=', 0)]}"/>
+                </header>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

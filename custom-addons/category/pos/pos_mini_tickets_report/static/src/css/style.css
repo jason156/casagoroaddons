@@ -1,0 +1,46 @@
+.pos .pos-sale-ticket table td{
+background: #DDD;
+padding: 1px 3px;
+border-radius:5px;
+ border: 1px solid #ddd !important;
+
+}
+
+.pos-sale-ticket table {
+    border-spacing: 3px;
+    border-collapse: separate;
+}
+
+.pos-sale-ticket{
+border: dashed 2px #666 !important;
+
+
+
+}
+.r-footer{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+@media print{
+.pos .pos-sale-ticket table td{
+background: #DDD;
+padding: 10px;
+border-radius:5px;
+
+}
+
+.pos-sale-ticket table {
+    border-spacing: 3px;
+    border-collapse: separate;
+}
+
+.pos-sale-ticket{
+border: dashed 2px #666 !important;
+
+}
+.r-footer{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+}

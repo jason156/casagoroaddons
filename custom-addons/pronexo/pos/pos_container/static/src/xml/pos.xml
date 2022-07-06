@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-name="SubitemsPopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-quot-order">
+                <p class="title">
+                    <!-- <t t-esc="widget.display_name"/> -->
+                </p>
+                <div class="body">
+                    <p class="flavor-counter">
+                        Elija los sabores (
+                        <span id="total-flavors-selected">
+                            <t t-esc="widget.selected_qty"/>
+                        </span>
+                        /
+                        <t t-esc="widget.max_items_to_select"/>
+                        )
+                    </p>
+                    <div class="product-container">
+                        <t t-if="widget.subitems">
+                            <t t-foreach="widget.subitems" t-as="item">
+                                <div class="product" t-att-data-product-id="item.id" t-att-data-line-id="item.id">
+                                    <div class="products_list">
+                                        <t t-set="product" t-value="widget.pos.db.get_product_by_id(item.id)"/>
+                                        <div class="product-img">
+                                            <img t-att-src='widget.pos.gui.screen_instances.products.product_list_widget.get_product_image_url(item)'/>
+                                        </div>
+                                        <span class="price-tag">
+                                            <t t-esc="widget.format_currency(item.price,'Product Price')"/>
+                                        </span>
+                                        <div class="product-name">
+                                            <t t-esc="item.display_name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        Ok
+</div>
+                    <div class="button cancel">
+                        Close
+</div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-extend="Orderline">
+        <t t-jquery="li:first" t-operation="attributes">
+            <attribute name="t-attf-class"></attribute>
+        </t>
+    </t>
+
+    <t t-extend="Orderline">
+        <t t-jquery="li:first" t-operation="attributes">
+            <attribute name="t-attf-class">
+                orderline #{ line.selected ? 'selected' : '' } #{ line.is_subproduct ? 'subproduct' : '' }
+            </attribute>
+        </t>
+    </t>
+
+    <t t-extend="PosTicket">
+        <t t-jquery="t[t-esc='orderline.get_product().display_name']" t-operation="before">
+            <t t-esc="orderline.is_subproduct ? '↪' : ''"/>
+        </t>
+        <t t-jquery="td[class='pos-right-align']:first t" t-operation="replace">
+            <t t-esc="orderline.is_subproduct ? '' : orderline.get_quantity_str_with_unit()"/>
+        </t>
+    </t>
+</template>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_picking_form" model="ir.ui.view">
+		<field name="name">view_picking.form</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.view_picking_form"/>
+		<field name="arch" type="xml">
+			<button name="action_confirm" position="before">
+				<button attrs="{'invisible': ['|',('distributed', '=', True), ('state','!=','done')]}" context="{'default_picking_id': id}" name="%(action_stock_distribute)d" string="Distribute" type="action"/>
+			</button>
+			<field name="priority" position="before">
+				<field name="distributed"/>
+				<field name="distribute_ids">
+					<tree>
+						<field name="name"/>
+						<field name="state"/>
+						<button name="open_distribute"  string="Open" type="object"/>
+					</tree>
+				</field>
+
+			</field>
+		</field>
+	</record>
+</odoo>

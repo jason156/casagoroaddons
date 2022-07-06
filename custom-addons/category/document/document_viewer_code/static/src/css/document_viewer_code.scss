@@ -1,0 +1,21 @@
+.o_web_client{
+    a{
+        .o_sidebar_viewer_code_item{
+            padding: 0;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+    }
+}
+
+.modal{
+    .o_document_viewer_code{
+        margin: -16px;
+        pre{
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="product_product_view_form_easy_inherit_stock" model="ir.ui.view">
+		<field name="name">product.product.view.form.easy.inherit.stock</field>
+		<field name="model">product.product</field>
+		<field name="inherit_id" ref="stock.product_product_view_form_easy_inherit_stock"/>
+		<field name="arch" type="xml">
+			<button name="action_update_quantity_on_hand" position="replace">
+				<button attrs="{'invisible': [('type', '!=', 'product')]}" groups="goro_ux.goro_group_inventory" name="action_update_quantity_on_hand" string="Update Quantity" type="object"/>
+			</button>
+		</field>
+	</record>
+</odoo>

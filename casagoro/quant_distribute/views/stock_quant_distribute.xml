@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="stock_quant_distribute_tree" model="ir.ui.view">
+		<field name="name">stock_quant_distribute.tree</field>
+		<field name="model">stock.quant.distribute</field>
+		<field name="arch" type="xml">
+			<tree string="description">
+				<field name="warehouse_id"/>
+				<field name="state"/>
+			</tree>
+		</field>
+	</record>
+	<record id="stock_quant_distribute_form" model="ir.ui.view">
+		<field name="name">stock_quant_distribute.form</field>
+		<field name="model">stock.quant.distribute</field>
+		<field name="arch" type="xml">
+			<form string="description">
+				<header>
+					<field name="state" widget="statusbar"/>
+				</header>
+				<sheet>
+					<group attrs="{'invisible':[('state', '!=', 'draft')]}" col="6" string="Search">
+						<field name="product_id"/>
+						<field name="location_parent_id"/>
+						<button name="add_quant" states="draft" string="Add" type="object"/>
+						<button name="add_quant_clear" states="draft" string="Add + clear" type="object"/>
+					</group>
+					<field name="distribute_quants_ids" attrs="{'readonly':[('state', 'in',['done', 'cancel'])]}"  widget='one2many'>
+						<tree editable="buttom">
+							<field name="product_id" readonly="True"/>
+							<field name="location_id" readonly="True"/>
+							<field name="quantity" readonly="True"/>
+							<field name="reserved_quantity" readonly="True"/>
+							<field name="distribute_quantity"/>
+						</tree>
+					</field>
+					<group attrs="{'invisible':[('state', '=', 'draft')]}">
+						<field name="warehouse_id"/>
+						<field attrs="{'invisible':True}" name="view_location_id"/>
+						<field domain="[('distribute','=',True), ('id','child_of',view_location_id)]" attrs="{'readonly':[('state', 'in',['done', 'cancel'])]}" name="location_ids" widget="many2many_checkboxes"/>
+					</group>
+					<group attrs="{'invisible':[('state', '=', 'draft')]}">
+						<span>
+							<field  attrs="{'readonly':[('state', 'in',['done', 'cancel'])]}" context="{'from_stock_quant_distribute':1}" field_label_x_axis="name" field_label_y_axis="loc_name" field_value="qty" field_x_axis="location_id" field_y_axis="quant_id" name="items_ids" widget="x2many_2d_matrix">
+								<tree>
+									<field name="distribute_id"/>
+									<field name="location_id"/>
+									<field name="quant_id"/>
+									<field name="qty"/>
+									<field name="name"/>
+									<field name="loc_name"/>
+								</tree>
+							</field>
+						</span>
+					</group>
+					<footer>
+						<button name="action_cancel" states="draft,distribute" string="Cancel" type="object"/>
+						<button name="action_distribute" states="draft" string="Distribute" type="object"/>
+						<button name="action_create_pickings" states="distribute" string="Process" type="object"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="action_stock_quant_distribute" model="ir.actions.act_window">
+		<field name="name">distribute</field>
+		<field name="res_model">stock.quant.distribute</field>
+		<field name="view_mode">tree,form</field>
+		<field name="target">current</field>
+	</record>
+	<menuitem action="action_stock_quant_distribute" id="stock_quant_distribute_menu" name="Quant distribute" parent="stock.menu_stock_inventory_control"/>
+	<record id="quant_distribute" model="ir.actions.act_window">
+		<field name="name">Distribute</field>
+		<field name="res_model">stock.quant.distribute</field>
+		<field name="view_mode">form</field>
+		<field name="target">current</field>
+		<field name="binding_model_id" ref="stock.model_stock_quant"/>
+	</record>
+</odoo>

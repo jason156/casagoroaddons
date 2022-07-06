@@ -1,0 +1,40 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_security
+# 
+# Translators:
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-26 00:45+0000\n"
+"PO-Revision-Date: 2019-12-13 01:03+0000\n"
+"Last-Translator: Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019\n"
+"Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_security
+#: model:ir.model.fields,field_description:website_security.field_website_page__groups_id
+msgid "Groups"
+msgstr "Grupos"
+
+#. module: website_security
+#: model:ir.model,name:website_security.model_website_page
+msgid "Page"
+msgstr ""
+
+#. module: website_security
+#: model:ir.ui.menu,name:website_security.website_page_menu
+msgid "Pages"
+msgstr ""
+
+#. module: website_security
+#: model:ir.model.fields,help:website_security.field_website_page__groups_id
+msgid "Si elige algun grupo, solo sera visible para usuarios de ese grupo"
+msgstr ""

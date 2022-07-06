@@ -1,0 +1,29 @@
+.product.selected {
+  -webkit-box-shadow: 0px 0px 5px 3px #6ec89b;
+  -moz-box-shadow: 0px 0px 5px 3px #6ec89b;
+  box-shadow: 0px 0px 5px 3px #6ec89b;
+}
+
+.flavor-counter {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0;
+  padding: 5px;
+}
+
+.product-container {
+  overflow-y: scroll;
+  height: 245px;
+}
+
+.pos .popup .body {
+  margin-top: 0;
+}
+
+.pos .order li.orderline.subproduct:before {
+  content: "↪";
+  padding-right: 5px;
+}
+.pos .order .orderline.subproduct {
+  padding-left: 30px;
+}

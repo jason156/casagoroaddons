@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_common" name="signup assets" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/user_signup_approval/static/src/js/restrict_country.js"></script>
+            <script src="/user_signup_approval/static/src/js/maxmin.js" type="text/javascript"></script>
+        </xpath>
+    </template>
+
+    <template id="auth_signup_extend" inherit_id="auth_signup.fields" name="Sign up - Reset Password">
+        <xpath expr="//div[hasclass('field-confirm_password')]" position="after">
+            <input t-att-value="country_code" id="restrict_country" type="hidden"/>
+        </xpath>
+    </template>
+
+    <template id="auth_signup_data_extend" inherit_id="auth_signup.signup" name="Sign up login">
+        <xpath expr="//form" position="before">
+            <div id="restrict_country_message" class="alert alert-danger o_hidden container mt64" role="alert"> <strong>Oops!</strong> Website is not allow to signup from this country! </div>
+        </xpath>
+    </template>
+</odoo>

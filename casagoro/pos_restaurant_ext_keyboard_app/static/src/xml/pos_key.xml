@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" inherit_id="point_of_sale.template">
+	<t t-extend="PaymentScreen-Paymentmethods">
+		<t t-jquery=".paymentmethod" t-operation="prepend">
+			<span style="font-weight:700; color:#fff; background:#6EC89B;padding:8px;border-radius:5px;"><t t-esc="payment_method.shortcut"/></span>
+		</t>
+	</t>
+</templates>

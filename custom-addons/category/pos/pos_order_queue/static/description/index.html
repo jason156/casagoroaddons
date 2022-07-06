@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Odoo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+<!-- odoo description page css -->
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-weight: 400;
+        line-height: 1.1;
+        color: #21272b;
+    }
+    
+    ul {
+        color: #222020;
+    }
+
+    .oe_styling_v8 a.btn {
+        color: white;
+    }
+
+    :root {
+       --primary: #00A09D;
+    }
+</style>
+
+<body data-spy="scroll" data-target="#navbar-example">
+<div class="container pr-5 pr-sm-0 pr-md-0 pr-lg-0">
+    <!-- Header -->
+    <div class="row justify-content-md-between justify-content-center border-bottom align-items-center py-2 mx-0 flex-column flex-sm-column flex-md-row flex-lg-row">
+        <div class="text-center mr-lg-5 mb-3 mb-lg-0">
+            <h2>Anggara.id</h2>
+        </div>
+        <div class="mt-md-0 mt-4 mb-3 mb-lg-0">
+            <a href="#" class="btn-outline-primary btn-sm mb-2 mb-lg-0 pr-3" style="font-size: 13px;position: relative;overflow: hidden;padding: 10px 4px;line-height: 0px;border-radius: 0;border: 1px solid var(--primary);transition: 0.2s ease-in-out;"><i class="fa fa-check"></i> Community</a>
+            <a href="#" class="btn-outline-primary btn-sm mb-2 mb-lg-0 pr-3" style="font-size: 13px;position: relative;overflow: hidden;padding: 10px 4px;line-height: 0px;border-radius: 0;border: 1px solid var(--primary);transition: 0.2s ease-in-out;"><i class="fa fa-check"></i> Enterprise</a>
+        </div>
+        <!-- <div class="mb-2 mb-lg-0 text-center text-sm-left mt-3 mt-sm-3 mt-md-0 mt-lg-0">
+            <a href="https://www.facebook.com/Ksolves.India" class="btn btn-sm px-0" style="border: none; font-size: 10px; width: 30px;color: #3b5999;"> <i class="fa fa-facebook fa-2x"></i> </a>
+            <a href="https://www.linkedin.com/company/ksolves" class="btn btn-sm px-0" style="font-size: 10px;border: none; width: 30px;color:#0077B5;"> <i class="fa fa-linkedin fa-2x"></i> </a>
+            <a href="https://www.youtube.com/channel/UCplv9V47g9VidekGN6Wp1ew" class="btn btn-sm px-0" style="font-size: 10px;border: none; width: 30px;color: #c4302b;"> <i class="fa fa-youtube-play fa-2x"></i> </a>
+            <a href="https://twitter.com/ksolves_india" class="btn btn-sm px-0" style="font-size: 10px;border: none; width: 30px;color: #00acee;"> <i class="fa fa-twitter fa-2x"></i> </a>
+        </div> -->
+    </div>
+    <div class="suggested-app" style="clear:both; width: 100%; float: left;">
+        <div class="">
+            <div class="w-100">
+                <div id="navbar-example" style="position: fixed;bottom: 100px;right: 0;z-index: 10000;">
+                    <ul class="nav nav-tabs mb-4" role="tablist" style="background: transparent;display: inline-block; border-bottom: 0px;position: sticky;right: 0;top: 0;padding-top: 20px; width: 60px;">
+                    <!-- Nav tabs -->
+                        <li class="nav-item" title="DESCRIPTION" style="border-radius:0;margin: 0 10px 3px 10px; background:#f1f1f1;">
+                            <a class="nav-link active" style="border-radius: 0;transition: 0.3s ease-in-out;border-color:#fdc6a3;color: #000;font-family: Roboto;font-weight: 500;padding:.5rem;text-align: center;"  href="#description"><img src="images/description-icon.svg" alt="" style="width: 100%;max-width: 25px; margin: 0 auto;"></a>
+                        </li>
+                        <li class="nav-item" style="border-radius:0;margin: 0 10px 3px 10px; background:#f1f1f1;">
+                            <a class="nav-link" title="FEATURES" style="border-radius: 0;transition: 0.3s ease-in-out;border-color:#fdc6a3;color: #000;font-family: Roboto;font-weight: 500;padding:.5rem;text-align: center;" href="#pills-home"><img src="images/Hot-Features-icon.svg" alt="" style="width: 100%;max-width: 25px; margin: 0 auto;"></a>
+                        </li>
+                        <li class="nav-item" title="SETUP" style="border-radius:0;margin: 0 10px 3px 10px; background:#f1f1f1;">
+                            <a class="nav-link " style="border-radius: 0;transition: 0.3s ease-in-out;border-color:#fdc6a3;color: #000;font-family: Roboto;font-weight: 500;padding:.5rem;text-align: center;"  href="#pills-set_up"><img src="images/Setup-icon.svg" alt="" style="width: 100%;max-width: 25px; margin: 0 auto;"></a>
+                        </li>
+                        <li class="nav-item" title="FAQs" style="border-radius:0;margin: 0 10px 3px 10px; background:#f1f1f1;">
+                            <a class="nav-link" style="border-radius: 0;transition: 0.3s ease-in-out;border-color:#fdc6a3;color: #000;font-family: Roboto;font-weight: 500;padding:.5rem;text-align: center;"  href="#pills-faqs"><img src="images/FAQ.svg" alt="" style="width: 100%; max-width: 25px; margin: 0 auto;"></a>
+                        </li>
+                    </ul>
+                </div>
+                    <div id="description" class="align-items-center py-4 pt-5 row mt-3 no-gutters" style="background: rgba(245, 245, 245, 0.61);padding: 0 25px 15px;">
+                        <h1 class="heading-title display-4 col-12 col-sm-12 col-md-12 col-lg-4" style="word-break: break-word;font-size: 2.5rem;line-height: normal;font-weight: 100">POS Order Queue</h1>
+                        <p  class="col-12 col-sm-12 col-md-12 col-lg-8 px-sm-4 p-2 pt-4" style="font-size: 16px;border-width: 3px;border-style: solid;border: 0;font-family:Roboto;color: #212529;border-left: solid 1px #c31728;text-align: justify ">
+                            <b style="color: #c31728;">POS Order Queue</b> Speed up Pos Order Transaction at Odoo Point of sale using the queue method. </p>
+                    </div>
+                <div id="pills-home" style="background: rgba(245, 245, 245, 0.61);padding: 0 25px 15px;">
+                            <div class="text-left py-4 pt-5">
+                                <h2 class="mb-3 display-4 text-center" style="font-size: 2.6rem; font-weight: 600">
+                                    <span style="color: #e32235;">Key</span> Features</h2>
+                            </div>
+                            <div class="mb-4">
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-lg-6">
+                                        <ul class="pl-0 pl-sm-0 pl-md-5 pl-lg-5" style="font-size:16px;color: #212529;">
+                                            <li class="mb-3 mt-2">
+                                                <span>Minimize the possibility of data loss.</span>
+                                            </li>
+                                            <li class="mb-3">
+                                                <span>good for point of sale in massive usage.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <ul class="pl-0 pl-sm-0 pl-md-5 pl-lg-5" style="font-size:16px;color: #212529;">
+                                            <li class="mb-3 mt-2">
+                                                <span>Speed up synchronization of point of sale transaction .</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                            <div id="pills-set_up">
+                                    <div class="text-left py-4 pt-5">
+                                        <h2 class="mb-3 display-4 text-center" style="font-size: 2.6rem; font-weight: 600">
+                                            <span style="color: #e32235;">How</span> to Setup</h2>
+                                    </div>
+
+                                    <!--Accordion wrapper-->
+                                    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                                    <!-- Accordion card -->
+                                    <div class="card mb-3" style="border-radius:0.25rem;border-color: #dddddd; font-weight:600;box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);">
+
+                                        <!-- Card header -->
+                                        <div class="card-header alert-info p-0 " role="tab" id="headingOne1" style="background: transparent;border-bottom: solid 1px #dddddd;">
+                                            <div class="d-flex justify-content-between pr-2" style="cursor: pointer;" data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                                            aria-controls="collapseOne1">
+                                                <a style="color: #21272b;display: block;padding: .75rem 1.25rem;">
+                                                        1. HOW IT WORKS
+                                                </a>
+                                                <span class="d-flex align-items-center justify-content-center"><i class="fa fa-chevron-down"></i></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Card body -->
+                                        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                                        data-parent="#accordionEx1">
+                                        <div class="card-body">
+                                            <div class="px-1 px-sm-2 px-md-3 px-lg-3 py-4 mb-3" style="background-image: url('setup/pos1.png')">
+                                                <p style="color: #000;font-size: 16px;line-height: 1.4;">
+                                                "Queue Post Order" switches odoo's default routing point of sale to the queue table before posting it to the stock and journal entries. This is necessary when there are many Point of sale transactions that are blocked from entering due to resource limitations of Postgresql servers or internet connections.
+                                                </p>
+                                                <img class="" src="setup/pos1.png" alt="1.0" style="max-width:100%;" >
+                                            </div>
+                                            <div class="px-1 px-sm-2 px-md-3 px-lg-3 py-4 mb-3" style="background-image: url('setup/pos2.png')">
+                                                <p style="color: #000;font-size: 16px;line-height: 1.4;">
+                                                        The queue list can be seen on the "Pos Order Queue" menu.
+                                                </p>
+                                                <img class="" src="setup/pos2.png" alt="2" style="max-width:100%;" >
+                                            </div>
+                                            <div class="px-1 px-sm-2 px-md-3 px-lg-3 py-4 mb-3" style="background-image: url('setup/1.png')">
+                                                <p style="color: #000;font-size: 16px;line-height: 1.4;">
+                                                        You can set the interval in the Post Order Queue on the "Scheduled Actions" menu, then enter the parameters in the form of an integer that matches your server's resources.
+                                                </p>
+                                                <img class="" src="setup/pos3.png" alt="3" style="max-width:100%;" >
+                                                <img class="" src="setup/pos4.png" alt="3" style="max-width:100%;" >
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                    </div>
+
+                                    </div>
+                                    </div>
+                                </div>
+
+                    <div id="pills-faqs" class="pt-5">
+                        <h2 class="mb-4 display-4 text-center" style="font-size: 2.6rem; font-weight: 600">
+                                <span style="color: #e32235;">FAQ's</span></h2>
+                        <ul class="list-unstyled mt-5 my-5">
+                            <li class="mb-4 d-flex align-items-baseline bg-white"
+                                style="border-radius: 10px;padding: 15px;box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border: solid 1px #ddd;">
+                                <span style="font-size:12px;position:relative;top:-2px; margin-right: 10px;">&#9632;</span>
+                                <div class="">
+                                    <h6 class="font-weight-bold">Is this app compatible with Odoo Enterprise?</h6>
+                                    <span style="font-size:14px; color: #212529">Yes, our app works with Odoo Enterprise as well as Community.</span>
+                                </div>
+                            </li>
+
+                            <li class="mb-4 d-flex align-items-baseline bg-white"
+                                style="border-radius: 10px;padding: 15px;box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border: solid 1px #ddd;">
+                                <span style="font-size:12px;position:relative;top:-2px; margin-right: 10px;">&#9632;</span>
+                                <div class="">
+                                    <h6 class="font-weight-bold">Need some customization in this app, whom to
+                                        contact?</h6>
+                                    <span style="font-size:14px; color: #212529">Please drop email at halo@anggara.id or raise a
+                                            ticket through Odoo store itself.</span>
+                                </div>
+                            </li>
+
+                            <li class="mb-4 d-flex align-items-baseline bg-white"
+                                style="border-radius: 10px;padding: 15px;box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border: solid 1px #ddd;">
+                                <span style="font-size:12px;position:relative;top:-2px; margin-right: 10px;">&#9632;</span>
+                                <div class="">
+                                    <h6 class="font-weight-bold">Do you provide any free support?</h6>
+                                    <span style="font-size:14px; color: #212529">Yes, we do provide free support for 90 days for
+                                            any queries or any bug/issue fixing.</span>
+                                </div>
+                            </li>
+
+<!--                            <li class="mb-4 d-flex align-items-baseline bg-white"-->
+<!--                                style="border-radius: 10px;padding: 15px;box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border: solid 1px #ddd;">-->
+<!--                                <span style="font-size:12px;position:relative;top:-2px; margin-right: 10px;">&#9632;</span>-->
+<!--                                <div class="">-->
+<!--                                    <h6 class="font-weight-bold">Do Check based on some conditions/conditional?</h6>-->
+<!--                                    <span style="font-size:14px; color: #a3a5a6">Yes, this app provides to create multiple woocommerce store instances.</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+
+<!--                            <li class="mb-4 d-flex align-items-baseline bg-white"-->
+<!--                                style="border-radius: 10px;padding: 15px;box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);border: solid 1px #ddd;">-->
+<!--                                <span style="font-size:12px;position:relative;top:-2px; margin-right: 10px;">&#9632;</span>-->
+<!--                                <div class="">-->
+<!--                                    <h6 class="font-weight-bold">Do there any parameter for measurement of Quality?</h6>-->
+<!--                                    <span style="font-size:14px; color: #a3a5a6">Yes, you can sync coupons data.</span>-->
+<!--                                </div>-->
+<!--                            </li>-->
+                        </ul>
+                    </div>
+        <div class="text-center p-3 mt-4 mb-5" style="clear: both; background-color: #8BC6EC;border-radius: 5px;background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);">
+            <marquee behavior="alternate" class="w-50">
+                <h3 class="font-weight-bold" style="font-family: 'roboto','sans-serif';color: #e33936 !important;">FREE 30 DAYS SUPPORT</h3>
+            </marquee>
+            <h5 class="mx-0 mx-sm-0 mx-md-0 mx-lg-5 px-0 px-sp-3 px-md-5 px-lg-5" style="line-height: 1.5;font-weight: 400;font-family: 'roboto','sans-serif';color: #333333;">We will provide FREE 30
+                days support for any doubt, queries, and bug fixing
+                (excluding data recovery) or any type of issues related to this module. This is
+                applicable from the date of purchase.
+            </h5>
+        </div>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

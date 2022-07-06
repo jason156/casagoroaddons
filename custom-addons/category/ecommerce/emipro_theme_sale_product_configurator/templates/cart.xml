@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!--=============================== Product Configurator Configure Optional Products ========================-->
+    <template id="product_configurator_ept" inherit_id="sale_product_configurator.configure_optional_products">
+        <xpath expr="//tr[hasclass('js_product')]//div[hasclass('css_quantity')]" position="attributes">
+            <attribute name="class">css_quantity input-group te_product_quantity</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('input-group-prepend')]" position="replace">
+            <div class="input-group-prepend">
+                <button t-attf-href="#" class="btn js_add_cart_json d-none d-md-inline-block quantity_add"
+                        aria-label="Remove one" title="Remove one">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('input-group-append')]" position="replace">
+            <div class="input-group-append">
+                <button t-attf-href="#" class="btn float_left js_add_cart_json d-none d-md-inline-block"
+                        aria-label="Add one" title="Add one">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </xpath>
+        <xpath expr="//table[hasclass('table-striped')]" position="attributes">
+            <attribute name="class">table table-striped te_table_popover</attribute>
+        </xpath>
+        <xpath expr="//td[hasclass('td-product_name')]/strong" position="attributes">
+            <attribute name="class">te_prod_name</attribute>
+        </xpath>
+        <xpath expr="//tr[@t-if='product.optional_product_ids']/td/h4" position="attributes">
+            <attribute name="class">cart_popover_title</attribute>
+        </xpath>
+        <xpath expr="//tr[hasclass('o_total_row')]/td[1]" position="attributes">
+            <attribute name="class">text-right te_total_colspan</attribute>
+        </xpath>
+    </template>
+
+    <template id="optional_product_items_ept" inherit_id="sale_product_configurator.optional_product_items">
+        <xpath expr="//div[hasclass('text-muted')]" position="attributes">
+            <attribute name="class">text-muted small small_text_add</attribute>
+        </xpath>
+        <xpath expr="//strong[hasclass('product-name')]" position="attributes">
+            <attribute name="class">product_name</attribute>
+        </xpath>
+        <xpath expr="//a[hasclass('js_add')]" position="attributes">
+            <attribute name="class">js_add te_cart_icon te_add_cart</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('float-left')]" position="attributes">
+            <attribute name="class"></attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('float-right')]" position="attributes">
+            <attribute name="class">float-left</attribute>
+        </xpath>
+    </template>
+
+
+    <template id="product_optional_checker" inherit_id="website_sale.product" name="product Optional Checker">
+        <xpath expr="//a[hasclass('a-submit')]" position="attributes">
+            <attribute name="t-att-optional-product">'1' if product.optional_product_ids else '0'</attribute>
+        </xpath>
+    </template>
+    <!--<template id="product_optional_checker_sticky" inherit_id="theme_clarico_vega.product_sticky_details_container"
+              name="product Optional Checker Sticky">
+        <xpath expr="//a[hasclass('a-submit')]" position="attributes">
+            <attribute name="t-att-optional-product">'1' if product.optional_product_ids else '0'</attribute>
+        </xpath>
+    </template>-->
+</odoo>

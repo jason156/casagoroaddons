@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="goro_ir_module_category" model="ir.module.category">
+        <field name="name">Casa Goro</field>
+    </record>
+    <record id="goro_group_inventory" model="res.groups">
+        <field name="name">Inventario Actualizar cantidad</field>
+        <field name="category_id" ref="goro_ir_module_category"/>
+        <field name="comment">Este grupo actualiza las cantidades</field>
+    </record>
+</odoo>

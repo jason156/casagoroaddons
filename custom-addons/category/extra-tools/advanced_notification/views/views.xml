@@ -1,0 +1,9 @@
+<odoo>
+  <data>
+   <template id="recurrent_assets_backend" name="recurrent notify assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/advanced_notification/static/src/js/session_notification.js"></script>
+        </xpath>
+    </template>
+  </data>
+</odoo>

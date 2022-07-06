@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="res_currency_form" model="ir.ui.view">
+		<field name="name">res_currency.form</field>
+		<field name="model">res.currency</field>
+		<field name="inherit_id" ref="base.view_currency_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[@class='oe_button_box']" position="inside">
+				<button class="oe_stat_button" icon="fa-money" name="bulk_price_update" string="Actualizacion masiva" type="object"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="point_of_sale.template" xml:space="preserve">
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery='div.payment-buttons' t-operation='append'>
+        	<t t-if='widget.pos.config.module_test_operations'>
+				<div t-attf-class='button js_test #{widget.pos.get_order() and widget.pos.get_order().is_to_test() ? "highlight" : ""} '>
+	                <i class='fa fa-low-vision' /> Test
+	            </div>
+            </t>
+        </t>
+    </t>
+</templates>

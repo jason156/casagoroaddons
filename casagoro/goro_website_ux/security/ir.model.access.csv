@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_goro_website_ux_goro_website_ux,goro_website_ux.goro_website_ux,model_goro_website_ux_goro_website_ux,base.group_user,1,1,1,1

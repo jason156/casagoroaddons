@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="systray.TranslateItem">
+        <li class="o_mail_navbar_item">
+            <a class="dropdown-toggle o-no-caret" data-toggle="dropdown" data-display="static" aria-expanded="false"
+               title="Translate" href="#" role="button">
+                <i class="fa fa-language" role="img" aria-label="Translate"/>
+            </a>
+            <ul class="o_mail_navbar_dropdown dropdown-menu dropdown-menu-right" role="menu">
+                <li class="o_mail_navbar_dropdown_top">
+                    <div class="container">
+                        <form class="form_translate" name="f_translate">
+                            <center>
+                                <h4>Translate</h4>
+                            </center>
+                            <hr/>
+                            <did class="form-group">
+                                <div class="col-25">
+                                    <label for="s_lang">Source:</label>
+                                </div>
+                                <div class="col-75">
+                                    <select id="src_lang" title="Source is automatically set if not selected.">
+                                        <option value="sl_lang">Detect language</option>
+                                    </select>
+                                </div>
+                            </did>
+                            <div class="form-group">
+                                <div class="col-100">
+                                    <textarea rows="5" name="text_input" id="ip_text"
+                                              placeholder="Type your text.." class="text_ip"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label for="d_lang">Destination:</label>
+                                </div>
+                                <div class="col-75">
+                                    <select id="dest_lang" title="Destination language"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-100">
+                                    <textarea rows="5" name="text_input" id="op_text"
+                                              placeholder="Translated text will be here.." class="text_op"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <center>
+                                <div class="alert alert-info" id="alert">
+                                    Text copied to clipboard.
+                                <br/>
+                                </div>
+                                <input type="button" class="clear" id="b_clear" title="Clear Text" value="Reset"/>
+                                <input type="button" class="copy" id="b_copy" title="Copy to Clipboard" value="Copy"/>
+                                <input type="button" class="translate" id="b_trans" title="Translate"
+                                       value="Translate"/>
+                                </center>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </t>
+</templates>

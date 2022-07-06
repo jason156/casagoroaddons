@@ -1,0 +1,24 @@
+[cmdline]
+0=
+
+[Dir Hist New Right Panel]
+0=/opt
+1=/home/pronexo
+
+[Dir Hist New Left Panel]
+0=/opt
+1=/opt/odoo13
+2=/opt/odoo13/13.0
+3=/opt/odoo13/13.0/extra-addons
+4=/opt/odoo13/13.0/extra-addons/casagoro
+5=/home/pronexo/source/13.0/extra-addons/backend_theme
+6=/home/pronexo/source/13.0/extra-addons/custom-addons/CybroAddons/access_restriction_by_ip
+7=/home/pronexo/source/13.0/extra-addons/custom-addons/CybroAddons
+8=/home/pronexo/source/13.0/extra-addons/custom-addons
+9=/home/pronexo/source/13.0/extra-addons/casagoro/packing_quant/__pycache__
+10=/home/pronexo/source/13.0/extra-addons/casagoro/packing_quant
+11=/home/pronexo/source/13.0/extra-addons/casagoro
+12=/home/pronexo/source/13.0/extra-addons
+13=/home/pronexo/source/13.0
+14=/home/pronexo/source
+15=/home/pronexo

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress XmlPathReference -->
+<templates id="template">
+    <t t-name="website_searchapp.search_autocompletev2">
+        <t t-set="data" t-value="search_data.result.results"/>
+        <t t-set="query" t-value="search_query"/>
+        <div class="search-main">
+            <div class="search-product">
+                <div class="search-title">Product
+                    <span class="count">
+                        <t t-esc="data.product.hits.total or 0"/>
+                    </span>
+                </div>
+                <ul class="search-results-list list-unstyled">
+                    <t t-if="data.product.hits.total">
+                        <li t-foreach="data.product.hits.hits" t-as="product">
+                            <a t-attf-href="{{product._source.url}}">
+                                <div class="img-placeholder">
+                                    <img t-att-src="product._source.image_url" alt=""/>
+                                </div>
+                                <div class="product-placeholder">
+                                    <div class="p-desc">
+                                        <t t-esc="product._source.name"/>
+                                    </div>
+                                    <div t-if="product._source.default_code" class="sku">
+                                        <t t-esc="product._source.default_code"/>
+                                    </div>
+                                    <div class="price-container">
+                                        <span t-if="product._source.price" class="price mr16">
+                                            <t t-esc="product._source.currency"/>
+                                            <t t-esc="product._source.price"/>
+                                        </span>
+                                        <span t-if="product._source.price_slash" class="price-slash">
+                                            <t t-esc="product._source.currency"/>
+                                            <t t-esc="product._source.price_slash"/>
+                                        </span>
+                                    </div>
+                                    <div t-if="product._source.rating and product._source.rating_count"
+                                         class="product-rating">
+                                        <span class="rating-star">
+                                            <span class="rating" t-att-data-star="product._source.rating"/>
+                                        </span>
+                                        <span class="rating-count">
+                                            <t t-esc="product._source.rating_count"/>
+                                            review(s)
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="show-all">
+                            <a class="showall" rel="nofollow" t-attf-href="/search?q={{query}}&amp;index=product">Show All
+                                product
+                            </a>
+                        </li>
+                    </t>
+                    <t t-else="">
+                        <li class="no-results">No results found.</li>
+                    </t>
+                </ul>
+            </div>
+        </div>
+        <div class="search-sidebar">
+            <div class="search-category">
+                <div class="search-title">Category
+                    <span class="count">
+                        <t t-esc="data.category.hits.total or 0"/>
+                    </span>
+                </div>
+                <ul class="search-results-list list-unstyled">
+                    <t t-if="data.category.hits.total">
+                        <li t-foreach="data.category.hits.hits" t-as="categ">
+                            <a t-attf-href="{{categ._source.url}}">
+                                <t t-esc="categ._source.name"/>
+                            </a>
+                        </li>
+                    </t>
+                    <t t-else="">
+                        <li class="no-results">No results found.</li>
+                    </t>
+                </ul>
+            </div>
+            <div t-foreach="data" t-as="other">
+                <t t-if="other_value.hits.total">
+                    <t t-set="name" t-value="other_value.hits.hits[0]._type"/>
+                    <t t-if="name != 'product'">
+                        <t t-if="name != 'category'">
+                            <div class="search-other">
+                                <div class="search-title">
+                                    <t t-esc="other"/>
+                                    <span class="count">
+                                        <t t-esc="other_value.hits.total or 0"/>
+                                    </span>
+                                </div>
+                                <ul class="search-results-list list-unstyled">
+                                    <t t-foreach="other_value.hits.hits" t-as="res">
+                                        <li>
+                                            <a t-attf-href="{{res._source.url}}">
+                                                <t t-esc="res._source.name"/>
+                                            </a>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </div>
+        </div>
+        <div class="sb-bottom" style="position: sticky; bottom: 0; margin-top: 26px; float: right; width: 100%; height: 100%">
+            <div style="position: absolute; width: 100%; font-size: 10px; font-style: italic; background-color: #f2f2f2; padding: 6px; text-align: right; bottom: 0; right: 0">
+                <a href="https://sitesearchapp.com" target="_blank" style="text-decoration: none;">Powered by SiteSearchApp.com</a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            <!--@formatter:off-->
+            var indexCount = {<t t-foreach="data" t-as="idx_count">'<t t-esc="idx_count"/>':<t t-esc="idx_count_value.hits.total"/>,</t>};
+            <!--@formatter:on-->
+        </script>
+    </t>
+</templates>

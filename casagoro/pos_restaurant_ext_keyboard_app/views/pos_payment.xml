@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="pos_payment_method_view_form_form">
+        <field name="name">pos_payment_method_view_form.form</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+        <field name="arch" type="xml">
+        	<field name="is_cash_count" position="after">
+        		<field name="shortcut"/>
+        	</field>
+        </field>
+    </record>
+</odoo>

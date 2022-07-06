@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="variant_mapping_backend"
+		inherit_id="web.assets_backend" active="True">
+		<xpath expr="." position="inside">
+			<script type="text/javascript"
+				src="/cft_product_variant_mapping/static/js/variant_mapping_widget.js"></script>
+			<link rel="stylesheet"
+				href="/cft_product_variant_mapping/static/css/css.css" />
+		</xpath>
+	</template>
+
+	<template id="product_template_card">
+		<script>
+			$(function() {
+				$("#sel1").select2();
+			});
+			$(".draggable-left, .draggable-right").sortable({
+			  connectWith: ".connected-sortable",
+			  stack: ".connected-sortable ul",
+			  
+		        receive: function(event, ui) {
+		        	$.post("/web/update_product_template",
+					  {'template_id': event.target.getAttribute('template_id'),
+					    'product_id': ui.item[0].id,
+					  },
+					  function(data){
+					    if (data.includes('data')){
+							var res = data.split(";;;$");
+							$(res[1]).text(res[2]+" Variants");
+							$(res[3]).text(res[4]+" Variants");
+							$(res[5]).text(res[6]);
+					    }else{
+							alert(data);
+						}
+					    
+					  });
+		        }
+			}).disableSelection();
+			
+		</script>
+		<div class="col-sm-4 main-template" t-att-id="option_id">
+			<div>
+				<div
+					style="padding: 10px;background: lavender;font-size: larger;font-weight: bold;"
+					data-item-sortable-id="0" role="option" aria-grabbed="false">
+
+					<div class="row">
+						<div class="col-sm-9">
+							<a href="#" class="item-author text-color">
+								<t t-esc="template.get('name')" />
+							</a>
+						</div>
+						<div class="col-sm-3">
+							<a href="#" class="close_template" style="float:right;"
+								t-att-id="'template-close-%s'%option_id">
+								X
+							</a>
+							<span class="badge" t-att-id="'template-badge-%s'%option_id" style="float:right;border:1px solid;">
+								<t t-esc="template.get('variant_count')" />
+								Variants
+							</span>
+						</div>
+
+					</div>
+
+				</div>
+		
+				<div class="list list-row card draggable-main" t-att-id="'%s-drop-template'%option_id"
+					aria-dropeffect="move"  ondragover="allowDrop(event)" t-att-template_id="'%s-template'%option_id">
+					<ul class="connected-sortable draggable-left" t-att-template_id="'%s-template'%option_id" >
+					<t t-foreach="template.get('variants')" t-as="variant">
+						<li class="list-item draggable shadow-sm"
+							t-att-id="'%s-variant'%variant.get('id')" t-att-template_id="'%s-template'%option_id" draggable="true" ondragstart="drag(event)">
+							
+							<div class="flex" t-att-template_id="'%s-template'%option_id">
+									<span class="item-author text-color"  t-att-id="'%s-variant-name'%variant.get('id')" t-att-template_id="'%s-template'%option_id"><t t-esc="variant.get('name')" /></span>
+								<div t-att-template_id="'%s-template'%option_id">
+									<t t-foreach="variant.get('attributes')" t-as="attribute">
+										<span class="badge" t-att-template_id="'%s-template'%option_id" style="border:1px solid;">
+											<t t-esc="attribute" />
+										</span>
+									</t>
+								</div>
+							</div>
+						</li>
+					</t>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+	</template>
+
+	<template id="variant_mapping">
+
+		<script>
+			$(function() {
+				$("#sel1").select2();
+			});
+			$(".draggable-left, .draggable-right").sortable({
+			  connectWith: ".connected-sortable",
+			  stack: ".connected-sortable ul",
+			  
+		        receive: function(event, ui) {
+		        	$.post("/web/update_product_template",
+					  {'template_id': event.target.getAttribute('template_id'),
+					    'product_id': ui.item[0].id,
+					  },
+					  function(data){
+					    if (data.includes('data')){
+					    	var res = data.split(";;;$");
+							$(res[1]).text(res[2]+" Variants");
+							$(res[3]).text(res[4]+" Variants");
+							$(res[5]).text(res[6]);
+					    }else{
+							alert(data);
+						}
+					    
+					  });
+		        }
+			}).disableSelection();
+			
+		</script>
+		<div>
+			<form>
+				<div class="form-group row"
+					style="padding: 15px;background-color: lightgray;">
+					<div class="col-sm-6">
+						<label for="sel1">Product</label>
+						<select class="form-control" id="sel1" name="sel1">
+							<t t-foreach="options" t-as="o">
+								<t t-if="o.get('id') == option_id">
+									<option t-att-value="o.get('id')" selected="1">
+										<t t-esc="o.get('name')" />
+									</option>
+								</t>
+								<t t-if="not o.get('id') == option_id">
+									<option t-att-value="o.get('id')">
+										<t t-esc="o.get('name')" />
+									</option>
+								</t>
+							</t>
+						</select>
+					</div>
+
+					<div class="col-sm-3">
+						<a id="add_product" class="btn btn-primary add_product"
+							style="height: 35px;margin: 15px;" href="#">Add Product
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="page-content page-container" style="overflow: auto;padding: 20px;" id="page-content">
+			<div class="padding">
+				<div class="row" id="template_grid">
+					<t t-if="template">
+						<div class="col-sm-4 main-template" t-att-id="option_id">
+			<div>
+				<div
+					style="padding: 10px;background: lavender;font-size: larger;font-weight: bold;"
+					data-item-sortable-id="0" role="option" aria-grabbed="false">
+
+					<div class="row">
+						<div class="col-sm-9">
+							<a href="#" class="item-author text-color">
+								<t t-esc="template.get('name')" />
+							</a>
+						</div>
+						<div class="col-sm-3">
+							<a href="#" class="close_template" style="float:right;"
+								t-att-id="'template-close-%s'%option_id">
+								X
+							</a>
+							<span class="badge" t-att-id="'template-badge-%s'%option_id" style="float:right;border:1px solid;">
+								<t t-esc="template.get('variant_count')" />
+								Variants
+							</span>
+						</div>
+
+					</div>
+
+				</div>
+		
+				<div class="list list-row card draggable-main" t-att-id="'%s-drop-template'%option_id"
+					aria-dropeffect="move"  ondragover="allowDrop(event)" t-att-template_id="'%s-template'%option_id">
+					<ul class="connected-sortable draggable-left" t-att-template_id="'%s-template'%option_id" >
+					<t t-foreach="template.get('variants')" t-as="variant">
+						<li class="list-item draggable shadow-sm"
+							t-att-id="'%s-variant'%variant.get('id')" t-att-template_id="'%s-template'%option_id" draggable="true" ondragstart="drag(event)">
+							
+							<div class="flex" t-att-template_id="'%s-template'%option_id">
+									<span class="item-author text-color" t-att-id="'%s-variant-name'%variant.get('id')" t-att-template_id="'%s-template'%option_id"><t t-esc="variant.get('name')" /></span>
+								<div t-att-template_id="'%s-template'%option_id">
+									<t t-foreach="variant.get('attributes')" t-as="attribute">
+										<span class="badge" t-att-template_id="'%s-template'%option_id" style="border:1px solid;">
+											<t t-esc="attribute" />
+										</span>
+									</t>
+								</div>
+							</div>
+						</li>
+					</t>
+					</ul>
+				</div>
+			</div>
+		</div>
+					</t>
+				</div>
+			</div>
+		</div>
+	</template>
+
+</odoo>

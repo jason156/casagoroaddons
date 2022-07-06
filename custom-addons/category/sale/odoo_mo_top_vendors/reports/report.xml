@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <report
+                id="odoo_mo_top_vendor_action"
+                model="odoo_mo.top_vendor"
+                report_type="qweb-pdf"
+                string="Top Vendors"
+                name="odoo_mo_top_vendors.top_temp"
+                file="odoo_mo_top_vendors.top_temp"
+        />
+
+         <report
+                id="odoo_mo_top_vendor_action_xlsx"
+                model="odoo_mo.top_vendor"
+                string="Top Vendors"
+                report_type="xlsx"
+                name="odoo_mo_top_vendors.xlsx"
+                file="odoo_mo_top_vendors.xlsx"
+                attachment_use="False"
+        />
+
+
+    </data>
+</odoo>

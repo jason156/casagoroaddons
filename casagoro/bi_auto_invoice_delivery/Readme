@@ -1,0 +1,12 @@
+13.0.0.1==>fixed issue of sending email from manual invoice .
+13.0.0.2 ==>fixed issue of mail layout and message.
+
+=> 13.0.0.3 : Improved an index as per latest changes.
+
+13.0.0.4: - Fixed issue of shipping address passed instead of invoice address in invoice. 
+		  - If product has BOM type kit, then instead of its components, product from SO will be displayed in invoice lines.
+
+13.0.0.5 ==>fixed issue of sale order with section and note.
+13.0.0.6==>fixed issue of incoming account.
+
+13.0.0.7 : Fix issue of discount and fiscal position.

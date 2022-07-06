@@ -1,0 +1,796 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ks_leaderboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 06:55+0000\n"
+"PO-Revision-Date: 2020-08-14 01:00-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.4\n"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_refresh_rate__60
+msgid "1 hr"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_refresh_rate__10
+msgid "10 min"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_refresh_rate__15
+msgid "15 min"
+msgstr ""
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items_header.xml:0
+#, python-format
+msgid "1st"
+msgstr "1ero"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_refresh_rate__30
+msgid "30 min"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_refresh_rate__5
+msgid "5 min"
+msgstr ""
+
+#. module: ks_leaderboard
+#: code:addons/ks_leaderboard/models/ks_leaderboard.py:0
+#, python-format
+msgid ""
+"<p class=\"o_view_nocontent_smiling_face\">\n"
+"                                        You can find all items related to Leaderboard Here.</p>\n"
+"                                    "
+msgstr ""
+"<p class=“o_view_nocontent_smiling_face”>\n"
+"                                        Puede encontrar todos los elementos relacionados con la tabla de clasificación aquí.</p>\n"
+"                                    "
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__ks_action
+msgid "Action"
+msgstr "Acción"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "Add Item"
+msgstr "Agregar Item"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "Add button"
+msgstr "Agregar botón"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/js/ks_leaderboard/ks_leaderboard_renderer.js:0
+#, python-format
+msgid "Are you sure you want to remove this item?"
+msgstr "¿Estás seguro de que quieres eliminar este artículo?"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_ranking_order__asc
+msgid "Ascending"
+msgstr "Ascendente"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_item_theme_display__blue
+msgid "Blue"
+msgstr "Azul"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_body_layout_display
+msgid "Body Layout"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.item_actions_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ks_leaderboard
+#: model:ir.ui.menu,name:ks_leaderboard.configuration_menu
+msgid "Configuration"
+msgstr "Configuratción"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__create_uid
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__create_uid
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__create_date
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__create_date
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__l_custom
+msgid "Custom Filter"
+msgstr "Filtro personalizado"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_date_filter_field_id
+msgid "Date Filter Field"
+msgstr "Campo de filtro de fecha"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_date_filter_selection
+msgid "Date Filter Selection"
+msgstr "Selección de filtro de fecha"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_group_by_date_selection__day
+msgid "Day"
+msgstr "Día"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_ranking_order__desc
+msgid "Descending"
+msgstr "Descendiendo"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "Discard"
+msgstr "Descartar"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "Discard Changes"
+msgstr "Descartar cambios"
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_item_form
+msgid "Display"
+msgstr "Mostrar"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__display_name
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__display_name
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_domain
+msgid "Domain"
+msgstr "Dominio"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items.xml:0
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item_actions__ks_action__duplicate
+#, python-format
+msgid "Duplicate"
+msgstr "Duplicar"
+
+#. module: ks_leaderboard
+#: model:ir.actions.act_window,name:ks_leaderboard.ks_action_item_duplicate
+msgid "Duplicate Items"
+msgstr "Duplicar Item"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "Edit Layout"
+msgstr "Editar Layout"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_item_end_date
+msgid "End Date"
+msgstr "Fecha Fin"
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_item_form
+msgid "Filters"
+msgstr "Filtros"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items.xml:0
+#, python-format
+msgid "Following Fields are required :"
+msgstr "Se requieren los siguientes campos :"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,help:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_group_by_field_name
+msgid "For relationship fields, the technical name of the target model"
+msgstr "Para los campos de relación, el nombre técnico del modelo de destino"
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_item_form
+msgid "General Info"
+msgstr "Info General"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_item_theme_display__green
+msgid "Green"
+msgstr "Verde"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_gridstack_config
+msgid "Gridstack Config"
+msgstr "Configuración de Gridstack"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_group_access
+msgid "Group Access"
+msgstr "Acceso a grupos"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_group_by_field_id
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_group_by_date_selection
+msgid "Group By Date"
+msgstr "Agrupar por Fecha"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_group_by_field_name
+msgid "Group By Field Name"
+msgstr "Agrupar por nombre de campo"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_group_by_field_type
+msgid "Group By Field Type"
+msgstr "Agrupar por tipo de campo"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_header_layout_display
+msgid "Header Layout"
+msgstr "Diseño de encabezado"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__id
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__id
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__id
+msgid "ID"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_item_image_field_id
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_item_form
+msgid "Image Field"
+msgstr "Campo de imagen"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_cards.xml:0
+#: code:addons/ks_leaderboard/static/src/xml/ks_items_header.xml:0
+#, python-format
+msgid "Invalid Image Field"
+msgstr "Campo de imagen no válido"
+
+#. module: ks_leaderboard
+#: model:ir.model,name:ks_leaderboard.model_ks_leaderboard_leaderboard_item_actions
+msgid "Item Actions Wizard"
+msgstr "Asistente de acciones de items"
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_item_form
+msgid "Item Data"
+msgstr ""
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/js/ks_leaderboard/ks_leaderboard_renderer.js:0
+#, python-format
+msgid "Item Duplicated"
+msgstr "Item Duplicado"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/js/ks_leaderboard/ks_leaderboard_renderer.js:0
+#, python-format
+msgid "Item Moved"
+msgstr "Item Movido"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_item_preview
+msgid "Item Preview"
+msgstr "Vista previa del Item"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_item_theme_display
+msgid "Item Theme"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__l_month
+msgid "Last 30 days"
+msgstr "Ultimos 30 días"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__l_year
+msgid "Last 365 days"
+msgstr "Ultimos 365 días"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__l_week
+msgid "Last 7 days"
+msgstr "Ultimos 7 días"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__l_quarter
+msgid "Last 90 days"
+msgstr "Ultimos 90 días"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__ls_day
+msgid "Last Day"
+msgstr "Ultimo día"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard____last_update
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item____last_update
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificación en"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__ls_month
+msgid "Last Month"
+msgstr "Ultimo Mes"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__ls_quarter
+msgid "Last Quarter"
+msgstr "Ultimo Trimestre"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__write_uid
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__write_uid
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización por"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__write_date
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__write_date
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__ls_week
+msgid "Last Week"
+msgstr "Ultima Semana"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__ls_year
+msgid "Last Year"
+msgstr "Ultimo Año"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_body_layout_display__layout_1
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_header_layout_display__layout_1
+msgid "Layout 1"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_body_layout_display__layout_2
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_header_layout_display__layout_2
+msgid "Layout 2"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_body_layout_display__layout_3
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_header_layout_display__layout_3
+msgid "Layout 3"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_body_layout_display__layout_4
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_header_layout_display__layout_4
+msgid "Layout 4"
+msgstr ""
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_body_layout_display__layout_5
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_header_layout_display__layout_5
+msgid "Layout 5"
+msgstr ""
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/js/ks_leaderboard/ks_leaderboard_view.js:0
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_leaderboard_id
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ir_ui_view__type__ks_leaderboard
+#, python-format
+msgid "Leaderboard"
+msgstr "Tabla de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.actions.act_window,name:ks_leaderboard.leaderboard_item_action
+#: model:ir.actions.act_window,name:ks_leaderboard.leaderboard_item_form_action
+msgid "Leaderboard Item"
+msgstr "Item de la tabla de clasificación"
+
+#. module: ks_leaderboard
+#: code:addons/ks_leaderboard/models/ks_leaderboard.py:0
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_item_ids
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__ks_lb_item_ids
+#, python-format
+msgid "Leaderboard Items"
+msgstr "Items de la tabla de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.actions.act_window,name:ks_leaderboard.leaderboard_form_tree_action_window
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_tree
+msgid "Leaderboard Manager"
+msgstr "Gerente de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_menu_id
+msgid "Leaderboard Menu Id"
+msgstr "ID del menú de la tabla de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__name
+msgid "Leaderboard Name"
+msgstr "Nombre de la tabla de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.module.category,name:ks_leaderboard.ks_leaderboard_security_groups
+msgid "Leaderboard Rights"
+msgstr "Derechos de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.ui.menu,name:ks_leaderboard.leaderboard_menu
+msgid "Leaderboards"
+msgstr "Tablas de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model,name:ks_leaderboard.model_ks_leaderboard_leaderboard_item
+msgid "Leaderboards Items"
+msgstr "Items de las tablas de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_record_limit
+msgid "Limit"
+msgstr "Límite"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_menu_name
+msgid "Menu Name"
+msgstr "Nombre Menú"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_menu_priority
+msgid "Menu Priority"
+msgstr "Prioridad Menú"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_model_id
+msgid "Model"
+msgstr "Modelo"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_model_name
+msgid "Model Name"
+msgstr "Nombre Modelo"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_group_by_date_selection__month
+msgid "Month"
+msgstr "Mes"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items.xml:0
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item_actions__ks_action__move
+#, python-format
+msgid "Move"
+msgstr "Mover"
+
+#. module: ks_leaderboard
+#: model:ir.actions.act_window,name:ks_leaderboard.ks_action_item_move
+msgid "Move Items"
+msgstr "Mover Items"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items.xml:0
+#, python-format
+msgid "Move/Duplicate"
+msgstr "Mover/Duplicar"
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.item_actions_form_view
+msgid "Move/Duplicate Items"
+msgstr "Mover/Duplicar Items"
+
+#. module: ks_leaderboard
+#: model:ir.ui.menu,name:ks_leaderboard.leaderboard_menu_root
+msgid "My Leaderboard"
+msgstr "Mi tabla de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__name
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__n_day
+msgid "Next Day"
+msgstr "Siguiente Día"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__n_month
+msgid "Next Month"
+msgstr "Siguiente Mes"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__n_quarter
+msgid "Next Quarter"
+msgstr "Siguiente Trimestre"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__n_week
+msgid "Next Week"
+msgstr "Siguiente Semana"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__n_year
+msgid "Next Year"
+msgstr "Siguiente Año"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items_header.xml:0
+#, python-format
+msgid "No Data Available!"
+msgstr "¡No hay datos disponibles!"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__l_none
+msgid "None (Leaderboard)"
+msgstr "Ninguno"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_group_by_date_selection__quarter
+msgid "Quarter"
+msgstr "Trimestre"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_cards.xml:0
+#, python-format
+msgid "Rank"
+msgstr "Rango"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_ranking_field_id
+msgid "Ranking Field"
+msgstr "Campo de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_ranking_order
+msgid "Ranking Order"
+msgstr "Orden de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_item_theme_display__red
+msgid "Red"
+msgstr "Rojo"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_refresh_rate
+msgid "Refresh Rate"
+msgstr "Frecuencia de actualización"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_item_image_relation_field_id
+msgid "Relation Image Field"
+msgstr "Campo de imagen de relación"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.item_actions_form_view
+#, python-format
+msgid "Save"
+msgstr "Guardar"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.ks_lb_item_search_view
+msgid "Search Items"
+msgstr "Buscar Items"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items.xml:0
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__ks_lb_id
+#, python-format
+msgid "Select Leaderboard"
+msgstr "Seleccionar tabla de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item_actions__ks_lb_ids
+msgid "Select Leaderboards"
+msgstr "Seleccionar tablas de clasificaciones"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/js/ks_leaderboard/ks_leaderboard_renderer.js:0
+#, python-format
+msgid "Selected item is duplicated to  ."
+msgstr "El elemento seleccionado se duplica a ."
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/js/ks_leaderboard/ks_leaderboard_renderer.js:0
+#, python-format
+msgid "Selected item is moved to  ."
+msgstr "El elemento seleccionado se mueve a ."
+
+#. module: ks_leaderboard
+#: model:res.groups,name:ks_leaderboard.ks_leaderboard_manager_group
+msgid "Show Full Leaderboard Features"
+msgstr "Mostrar todas las características de la tabla de clasificación"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_top_menu_id
+msgid "Show Under Menu"
+msgstr "Mostrar bajo el menú"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_item_start_date
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,help:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_gridstack_config
+msgid "This Field store the Stringify Dict of Gridstack Item Configuration"
+msgstr "Este campo almacena la configuración de la configuración de los elementos de la pila de Items"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__t_month
+msgid "This Month"
+msgstr "Este Mes"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__t_quarter
+msgid "This Quarter"
+msgstr "Este Trimestre"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__t_week
+msgid "This Week"
+msgstr "Esta Semana"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__t_year
+msgid "This Year"
+msgstr "Este Año"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "To add Leaderboard item, use"
+msgstr "Para añadir un elemento de la tabla de clasificación, utilice"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_date_filter_selection__l_day
+msgid "Today"
+msgstr "Hoy"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_item_theme_gradient
+msgid "Use Gradient"
+msgstr "Usar Degradado"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard_item__ks_allow_grouping
+msgid "Use Grouping"
+msgstr "Usar agrupación"
+
+#. module: ks_leaderboard
+#: model:ir.model,name:ks_leaderboard.model_ir_ui_view
+msgid "View"
+msgstr "Ver"
+
+#. module: ks_leaderboard
+#: model_terms:ir.ui.view,arch_db:ks_leaderboard.leaderboard_tree
+msgid "View Items"
+msgstr "Ver Items"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ir_ui_view__type
+msgid "View Type"
+msgstr "Ver Tipo"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields,field_description:ks_leaderboard.field_ks_leaderboard_leaderboard__ks_leaderboard_action_id
+msgid "Web Server Action Id"
+msgstr "ID de acción del servidor web"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_group_by_date_selection__week
+msgid "Week"
+msgstr "Semana"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_item_theme_display__white_black
+msgid "White/Black"
+msgstr "Blanco/Negro"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_group_by_date_selection__year
+msgid "Year"
+msgstr "Año"
+
+#. module: ks_leaderboard
+#: model:ir.model.fields.selection,name:ks_leaderboard.selection__ks_leaderboard_leaderboard_item__ks_item_theme_display__yellow
+msgid "Yellow"
+msgstr "Amarillo"
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "Your personal Leaderboard is empty"
+msgstr "Tu tabla de clasificación personal está vacía"
+
+#. module: ks_leaderboard
+#: model:ir.model,name:ks_leaderboard.model_ks_leaderboard_leaderboard
+msgid "ks_leaderboard.leaderboard"
+msgstr ""
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_leaderboard.xml:0
+#, python-format
+msgid "on top right corner."
+msgstr "en la esquina superior derecha."
+
+#. module: ks_leaderboard
+#. openerp-web
+#: code:addons/ks_leaderboard/static/src/xml/ks_items_header.xml:0
+#, python-format
+msgid "points"
+msgstr "puntos"

@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+    <record id="product_template_form" model="ir.ui.view">
+      <field name="name">product_template_form_view.form</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+        <field name="image_1920" position="replace">
+          <field name="image_1920" options="{'preview_image': 'image_256','size': [False, 180]}'}" style="float:right;max-heigth:100px;" widget="image"/>
+        </field>
+      </field>
+    </record>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+      <field name="name">res.config.settings.view.form.inherit.website</field>
+      <field name="model">res.config.settings</field>
+      <field eval="20" name="priority"/>
+      <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//div[contains(@id, 'domain_settings')]/div/div[2]" position="after">
+          <div class="row">
+            <label class="col-lg-3 o_light_label" for="user_id"/>
+            <field class="float-left oe_avatar" name="user_id"/>
+          </div>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

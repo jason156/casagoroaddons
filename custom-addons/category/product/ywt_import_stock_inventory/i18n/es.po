@@ -1,0 +1,270 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ywt_import_stock_inventory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-23 02:24+0000\n"
+"PO-Revision-Date: 2020-10-22 23:37-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: ywt_import_stock_inventory
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_adjustments_form_view
+msgid ""
+"* If any issue regards import then check log at \"Inventory &gt; Operations "
+"&gt; Import Stock Inventory Log\""
+msgstr ""
+"* Si hay algún problema relacionado con la importación, consulte el "
+"registro en “Registro de inventario & gt; Operaciones & gt; Importar "
+"inventario de inventario”"
+
+#. module: ywt_import_stock_inventory
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_adjustments_form_view
+msgid "* Please provide Only Comma Delimited '.CSV' File Will Be Process."
+msgstr ""
+"* Proporcione solo el archivo ‘.CSV’ delimitado por comas que se procesará."
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_adjustments__import_productby__barcode
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_adjustments__import_filetype__csv
+msgid "CSV"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_adjustments_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_adjustments__file_delimiter__,
+msgid "Comma"
+msgstr "Coma"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__create_uid
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__create_uid
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__create_date
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__create_date
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__file_delimiter
+msgid "Delimiter"
+msgstr "Delimitador"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__display_name
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__display_name
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_log__operation__export
+msgid "Export"
+msgstr "Exportar"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__datas
+msgid "File Data"
+msgstr "Datos de archivo"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__selectedfile_name
+msgid "Filename"
+msgstr "Nombre del archivo"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__id
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__id
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_log__operation__import
+msgid "Import"
+msgstr "Importar"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.actions.act_window,name:ywt_import_stock_inventory.ywt_import_stock_inventory_log_action
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_log_form_view
+msgid "Import Inventory Log"
+msgstr "Importar log de inventario"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__import_productby
+msgid "Import Product By"
+msgstr "Importar producto por"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__import_filetype
+msgid "Import Report Type"
+msgstr "Importar tipo de informe"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.ui.menu,name:ywt_import_stock_inventory.ywt_import_stock_adjustments_mainmenu
+msgid "Import Stock Invantory Adjustments"
+msgstr "Importar ajustes de inventario de stock"
+
+#. module: ywt_import_stock_inventory
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_adjustments_form_view
+msgid "Import Stock Inventory Adjustments"
+msgstr "Importar ajustes de inventario de stock"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.actions.act_window,name:ywt_import_stock_inventory.ywt_import_stock_inventory_adjustments_action
+msgid "Import Stock Inventory Adjustments "
+msgstr "Importar ajustes de inventario de stock"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.ui.menu,name:ywt_import_stock_inventory.ywt_import_stock_inventory_log_menu
+msgid "Import Stock Inventory Log"
+msgstr "Importar log de inventario de stock"
+
+#. module: ywt_import_stock_inventory
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_log_form_view
+msgid "Import Stock Inventory Log Line"
+msgstr "Importar línea de log de inventario de stock"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_log_line__log_type__info
+msgid "Info"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_adjustments__import_productby__default_code
+msgid "Internal Reference"
+msgstr "Referencia interna"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments____last_update
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log____last_update
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__write_uid
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__write_uid
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__write_date
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__write_date
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__log_date
+msgid "Log Date"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__log_id
+msgid "Log ID"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__log_line_ids
+msgid "Log Line"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_log_form_view
+msgid "Log Lines"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__log_type
+msgid "Log Type"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log_line__message
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_log_line__log_type__mismatch
+msgid "Mismatch"
+msgstr "Discordancia"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__name
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_adjustments__import_productby__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_log__operation
+msgid "Operation"
+msgstr "Operación"
+
+#. module: ywt_import_stock_inventory
+#: model_terms:ir.ui.view,arch_db:ywt_import_stock_inventory.ywt_import_stock_inventory_adjustments_form_view
+msgid "Process Inventory Adjustments"
+msgstr "Procesar ajustes de inventario"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__select_file
+msgid "Select File"
+msgstr "Seleccione Archivo"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,help:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__file_delimiter
+msgid "Select a delimiter to process CSV file."
+msgstr "Seleccione un delimitador para procesar el archivo CSV."
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__stocklocation_id
+msgid "Source Location"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields,field_description:ywt_import_stock_inventory.field_ywt_import_stock_inventory_adjustments__is_validate_inventory
+msgid "Validate Inventory"
+msgstr "Validar inventario"
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model.fields.selection,name:ywt_import_stock_inventory.selection__ywt_import_stock_inventory_adjustments__import_filetype__xlsx
+msgid "Xlsx"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model,name:ywt_import_stock_inventory.model_ywt_import_stock_inventory_adjustments
+msgid "ywt.import.stock.inventory.adjustments"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model,name:ywt_import_stock_inventory.model_ywt_import_stock_inventory_log
+msgid "ywt.import.stock.inventory.log"
+msgstr ""
+
+#. module: ywt_import_stock_inventory
+#: model:ir.model,name:ywt_import_stock_inventory.model_ywt_import_stock_inventory_log_line
+msgid "ywt.import.stock.inventory.log.line"
+msgstr ""

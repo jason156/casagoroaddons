@@ -1,0 +1,204 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_price_wiz
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200807\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-27 01:31+0000\n"
+"PO-Revision-Date: 2020-11-26 22:50-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__actual_price
+#: model_terms:ir.ui.view,arch_db:product_price_wiz.product_price_wiz_form
+msgid "Actual"
+msgstr ""
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__create_uid
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__create_date
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__default_percent
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_pricelist__default_percent
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_pricelist_item__default_percent
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_product__default_percent
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_template__default_percent
+msgid "Default percent"
+msgstr "Porcentaje"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__display_name
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,help:product_price_wiz.field_product_price_wiz_line__min_quantity
+msgid ""
+"For the rule to apply, bought/sold quantity must be greater than or equal to the minimum quantity specified in this field.\n"
+"Expressed in the default unit of measure of the product."
+msgstr ""
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__id
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__id
+msgid "ID"
+msgstr ""
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz____last_update
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación en"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__write_uid
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__write_date
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__list_price
+msgid "List price"
+msgstr "Precio de lista"
+
+#. module: product_price_wiz
+#: model_terms:ir.ui.view,arch_db:product_price_wiz.product_price_wiz_form
+msgid "Ok"
+msgstr ""
+
+#. module: product_price_wiz
+#: model_terms:ir.ui.view,arch_db:product_price_wiz.product_template_form
+msgid "Precios"
+msgstr ""
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__fixed_price
+#: model_terms:ir.ui.view,arch_db:product_price_wiz.product_price_wiz_form
+msgid "Price"
+msgstr "Precio"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,help:product_price_wiz.field_product_price_wiz__list_price
+msgid "Price at which the product is sold to customers."
+msgstr ""
+
+#. module: product_price_wiz
+#: model:ir.model,name:product_price_wiz.model_product_pricelist
+msgid "Pricelist"
+msgstr "Tarifa"
+
+#. module: product_price_wiz
+#: model_terms:ir.ui.view,arch_db:product_price_wiz.product_price_wiz_form
+msgid "Pricelist Items"
+msgstr "Reglas"
+
+#. module: product_price_wiz
+#: model:ir.model,name:product_price_wiz.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr "Regla de Tarifa"
+
+#. module: product_price_wiz
+#: model:ir.model,name:product_price_wiz.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: product_price_wiz
+#: model:ir.model,name:product_price_wiz.model_product_price_wiz
+msgid "Product price wizard"
+msgstr "Asistente de precios"
+
+#. module: product_price_wiz
+#: model:ir.model,name:product_price_wiz.model_product_price_wiz_line
+msgid "Product price wizard line"
+msgstr "Linea de asistente de precios"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__product_id
+msgid "Products"
+msgstr "Productos"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__seller_price
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__seller_price
+msgid "Seller price"
+msgstr "Precios compra"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_pricelist__use_price_wiz
+msgid "Use in wizard"
+msgstr "Usar en el  asistente de precios"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__actual_price
+msgid "actual"
+msgstr "Actual"
+
+#. module: product_price_wiz
+#: model_terms:ir.ui.view,arch_db:product_price_wiz.product_price_wiz_form
+msgid "description"
+msgstr "descripcion"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__line_ids
+msgid "fields"
+msgstr "Campos"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__pricelist_item_id
+msgid "item"
+msgstr "item"
+
+#. module: product_price_wiz
+#: model_terms:ir.ui.view,arch_db:product_price_wiz.product_price_wiz_form
+msgid "list prices"
+msgstr "Precios de lista"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__min_quantity
+msgid "min qty"
+msgstr ""
+
+#. module: product_price_wiz
+#: model:ir.actions.act_window,name:product_price_wiz.action_product_price_wiz
+msgid "price wiz"
+msgstr ""
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__pricelist_id
+msgid "pricelist"
+msgstr "Tarifa"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz__sale_price_percent
+msgid "sale percent"
+msgstr "Porcentaje"
+
+#. module: product_price_wiz
+#: model:ir.model.fields,field_description:product_price_wiz.field_product_price_wiz_line__wiz_id
+msgid "wiz"
+msgstr ""

@@ -1,0 +1,12 @@
+<odoo>
+    <record id="sitesearchapp_indexer_scheduler" model="ir.cron">
+        <field name="name">SiteSearchApp Indexer</field>
+        <field name="model_id" ref="model_searchapp_search"/>
+        <field name="state">code</field>
+        <field name="code">model.searchapp_scheduler()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field eval="False" name="doall"/>
+    </record>
+</odoo>

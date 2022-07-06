@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_users_form_kero" model="ir.ui.view">
+        <field name="name">res.users.form.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="approved_user" groups="base.group_no_one" invisible="1"/>
+                <field name="rejected_user" groups="base.group_no_one" invisible="1"/>
+            </field>
+            <xpath expr="//header">
+                <button name="approve_user" string="Approve" type="object" class="btn-primary"
+                        attrs="{'invisible': [('active', '=', True)]}"/>
+                <button name="reject_user" string="Rejected" type="object"
+                        attrs="{'invisible': ['|', ('active', '=', True), ('rejected_user', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//page[@name='access_rights']" position="before">
+                <page name="contact_details" string="Contact Details" attrs="{'invisible': [('active', '=', True)]}">
+                    <group>
+                        <group>
+                            <field name="tax_no"/>
+                            <field name="cust_name"/>
+                            <field name="login"/>
+                            <field name="user_firstname"/>
+                            <field name="user_lastname"/>
+                        </group>
+                        <group>
+                            <field name="user_phone"/>
+                            <field name="user_city"/>
+                            <field name="user_country_id"/>
+                            <field name="company_id_file" filename="company_id_filename"/>
+                            <field name="letter_intent" filename="letter_intent_filename"/>
+                            <field name="board_resolution" filename="board_resolution_filename"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_res_users_pending_for_approval" model="ir.actions.act_window">
+        <field name="name">Users Pending For Approval</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.users</field>
+        <field name="view_id" ref="base.view_users_tree"/>
+        <field name="search_view_id" ref="base.view_users_search"/>
+        <field name="domain">[('active', '=', False)]</field>
+        <field name="context">{'search_default_no_share': 0}</field>
+    </record>
+
+    <record id="action_res_users_pending_for_approva_view1" model="ir.actions.act_window.view">
+        <field eval="10" name="sequence"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="base.view_users_tree"/>
+        <field name="act_window_id" ref="action_res_users_pending_for_approval"/>
+    </record>
+
+    <record id="action_res_users_pending_for_approva_view2" model="ir.actions.act_window.view">
+        <field eval="20" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="base.view_users_form"/>
+        <field name="act_window_id" ref="action_res_users_pending_for_approval"/>
+    </record>
+
+    <menuitem action="action_res_users_pending_for_approval" id="menu_action_res_users_pending_for_approval"
+              parent="base.menu_users" sequence="1"/>
+</odoo>

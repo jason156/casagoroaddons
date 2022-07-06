@@ -1,0 +1,64 @@
+<odoo>
+  <data>
+    <template id="assets_backend" inherit_id="web.assets_backend" name="ribbon">
+      <xpath expr="." position="inside">
+        <link href="/goro_ux/static/src/css/kanban_ribbon.scss" rel="stylesheet"/>
+      </xpath>
+    </template>
+    <record id="product.product_template_kanban_view" model="ir.ui.view">
+      <field name="name">Product.template.product.kanban</field>
+      <field name="model">product.template</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <field name="id"/>
+          <field name="product_variant_count"/>
+          <field name="currency_id"/>
+          <field name="activity_state"/>
+          <progressbar colors="{&quot;planned&quot;: &quot;success&quot;, &quot;today&quot;: &quot;warning&quot;, &quot;overdue&quot;: &quot;danger&quot;}" field="activity_state"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_global_click">
+                <div class="oe_kanban_details">
+                  <strong class="o_kanban_record_title">
+                    <field name="name"/>
+                    <small t-if="record.default_code.value">[
+                      <field name="default_code"/>
+                      ]</small>
+                  </strong>
+                  <div groups="product.group_product_variant" t-if="record.product_variant_count.value &gt; 1">
+                    <strong>
+                      <t t-esc="record.product_variant_count.value"/>Variants</strong>
+                  </div>
+                  <div class="o_kanban_image" style="width:128px;float:right;">
+                    <img alt="Product" class="o_image_128_contain" t-att-src="kanban_image('product.template', 'image_128', record.id.raw_value)"/>
+                  </div>
+                  <div name="tags"/>
+                  <ul>
+                    <li>Price: <field name="lst_price" options="{'currency_field': 'currency_id', 'field_digits': True}" widget="monetary"/></li>
+                  </ul>
+                  <div name="tags"/>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+    <record id="product_pos_kanban_kanban" model="ir.ui.view">
+      <field name="name">product_pos_kanban.kanban</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_kanban_view"/>
+      <field name="arch" type="xml">
+        <field name="id" position="after">
+          <field name="available_in_pos"/>
+        </field>
+        <xpath expr="//t[@t-name='kanban-box']//strong[contains(@class, 'o_kanban_record_title')]" position="before">
+          <div class="kanban-ribbon kanban-ribbon-top-right">
+            <span attrs="{'invisible': [('available_in_pos', '=', True)]}" class="bg-danger">No disponible</span>
+            <span attrs="{'invisible': [('available_in_pos', '=', False)]}" class="bg-success">Disponible</span>
+          </div>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

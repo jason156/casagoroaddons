@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_location_form" model="ir.ui.view">
+    <field name="name">view_location.form</field>
+    <field name="model">stock.location</field>
+    <field name="inherit_id" ref="stock.view_location_form"/>
+    <field name="arch" type="xml">
+      <field name="removal_strategy_id" position="after">
+        <field name="distribute"/>
+        <field attrs="{'invisible':[('distribute','=',False)]}" name="distribute_part"/>
+        <field attrs="{'invisible':[('distribute','=',False)]}" name="distribute_sequence"/>
+      </field>
+    </field>
+  </record>
+</odoo>

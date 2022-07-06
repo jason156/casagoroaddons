@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record id="posorder_queue_view_tree" model="ir.ui.view">
+            <field name="name">posorder.queue.tmp.view.tree</field>
+            <field name="model">posorder.queue</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Pos Order Queue" create="false" delete="false">
+                    <field name="session_id"/>
+    				<field name="order_ref"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="posorder_queue_view_form" model="ir.ui.view">
+            <field name="name">posorder.queue.view.form</field>
+            <field name="model">posorder.queue</field>
+            <field name="arch" type="xml">
+                <form string="Pos Order Queue" create="false" duplicate="false" delete="false">
+                	<header>
+                		<field name="state" widget="statusbar"/> 
+                        <button name="process_json_ui" string="Process Json" type="object" states="draft" class="btn-primary" groups="base.group_system"/>
+                	</header>
+                	<sheet>
+                		<group>
+                			<group>
+                				<field name="session_id"/>
+                				<field name="order_ref"/>
+                				<field name="jsondata"/>
+                			</group>
+                		</group>
+                	</sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_posorder_queue_tree_all" model="ir.actions.act_window">
+            <field name="name">Pos Order Queue</field>
+            <field name="res_model">posorder.queue</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+            <field name="context">{
+                    'search_default_posorder_queue_draft': 1,
+                }
+            </field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Not found
+              </p>
+            </field>
+        </record>
+
+        <record id="posorder_queue_filter" model="ir.ui.view">
+            <field name="name">posorder.queue.filter</field>
+            <field name="model">posorder.queue</field>
+            <field name="priority" eval="15"/>
+            <field name="arch" type="xml">
+                <search string="Search Order">
+                    <filter string="Draft" domain="[('state','=','draft')]" name="posorder_queue_draft"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Session" name="session" domain="[]" context="{'group_by':'session_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <menuitem id="posorder_queue_menu_root"
+            name="Pos Order Queue"
+            parent="point_of_sale.menu_point_root"
+            action="action_posorder_queue_tree_all"
+            sequence="9"/>
+    </data>
+</odoo>

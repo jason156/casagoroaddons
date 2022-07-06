@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="signup_thankyou" name="Sign up - Thankyou">
+        <t t-call="web.login_layout">
+            <div class="container mt32">
+                <div class="col-md-12">
+                    <p class='alert alert-warning'> Thank You for the singup we will sent you activation email on your registered email shortly once Your Account is Approved.<br/>
+                        <a href="/"> <i class="fa fa-reply" aria-hidden="true"></i> Go Back to Home</a>
+                    </p>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+
+<!-- Everyone own drafts -->
+    <record model="ir.rule" id="prt_message_drafts_all">
+        <field name="name">Access own message dfrafts only</field>
+        <field name="model_id" ref="prt_mail_messages_draft.model_prt_mail_message_draft"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">[('author_id', '=', user.partner_id.id)]</field>
+    </record>
+  </data>
+</odoo>

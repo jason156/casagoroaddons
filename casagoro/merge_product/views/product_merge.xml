@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="product_merge_form">
+        <field name="name">product_merge.form</field>
+        <field name="model">product.merge</field>
+        <field name="arch" type="xml">
+            <form string="description">
+                <header>
+                    <button name="action_back" states="step_2" string="Restart" type="object"/>
+                    <button name="check_variants" states="step_1,step_2" string="Check" type="object"/>
+                    <button name="process_yalm" states="step_2" string="Process" type="object"/>
+
+                	<field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="base_template_id" attrs="{'readonly':[('state', '!=', 'step_1')]}"/>
+                    </h1>
+                    <group>
+
+                        <field name="pattern"/>
+                        <field name="attribute_ids"/>
+                        <field name="product_ids" attrs="{'invisible':[('state', '=', 'step_2')]}"/>
+                    </group>
+                    <group>
+                        <span><field name="log" attrs="{'invisible':[('state', '=', 'step_1')]}"/></span>                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_product_merge" model="ir.actions.act_window">
+    	<field name="name">product merge</field>
+    	<field name="res_model">product.merge</field>
+    	<field name="view_mode">form</field>
+    </record>
+    <menuitem id="product_merge_menu"  parent="sale.product_menu_catalog" action="action_product_merge"/>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="systray_translator" name="translator assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/systray_translator/static/src/js/systray_translator.js"></script>
+                <link rel="stylesheet" href="/systray_translator/static/src/scss/systray_translator.scss"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
+

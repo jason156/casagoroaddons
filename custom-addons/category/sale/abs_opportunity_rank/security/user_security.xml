@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+        <record id="group_only_show_opportunity_rank" model="res.groups">
+            <field name="name">Show Opportunity Rank</field>
+        </record>  
+    </data>
+</odoo>

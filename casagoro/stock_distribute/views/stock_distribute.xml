@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="stock_distribute_form" model="ir.ui.view">
+		<field name="name">stock_distribute.form</field>
+		<field name="model">stock.distribute</field>
+		<field name="arch" type="xml">
+			<form string="description">
+				<header>
+					<button name="action_cancel" states="draft"  string="Cancel" type="object"/>
+					<button name="action_create_pickings" states="draft"  string="Process" type="object"/>
+					<field name="state" widget="statusbar"/>
+				</header>
+				<sheet>
+					<h1>
+						<field name="picking_id" attrs="{'readonly':True}"/>
+					</h1>
+					<group>
+						<field name="warehouse_id"/>
+						<field name="view_location_id" attrs="{'invisible':True}"/>
+						<field domain="[('distribute','=',True), '|', ('id','child_of',view_location_id),('usage','=','transit')]" name="location_ids" widget="many2many_checkboxes"/>
+					</group>
+					<group><span>
+						<field field_label_x_axis="name" field_label_y_axis="loc_name" field_value="qty" field_x_axis="location_id" field_y_axis="move_id" name="items_ids" widget="x2many_2d_matrix" context="{'from_stock_distribute':1}">
+							<tree>
+								<field name="distribute_id"/>
+								<field name="location_id"/>
+								<field name="move_id"/>
+								<field name="qty"/>
+								<field name="name"/>
+								<field name="loc_name"/>
+							</tree>
+						</field></span>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="action_stock_distribute" model="ir.actions.act_window">
+		<field name="name">distribute</field>
+		<field name="res_model">stock.distribute</field>
+		<field name="view_mode">form</field>
+		<field name="target">current</field>
+	</record>
+</odoo>

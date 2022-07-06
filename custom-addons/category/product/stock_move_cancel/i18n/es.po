@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_move_cancel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-23 01:51+0000\n"
+"PO-Revision-Date: 2020-10-22 22:55-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "- Cancel selected stock moves and related picking."
+msgstr "- Cancelar movimientos de stock seleccionados y picking relacionado."
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "- Delete related quants movements."
+msgstr "- Eliminar movimientos quants relacionados."
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "- Delete selected stock moves."
+msgstr "- Eliminar movimientos de stock seleccionados."
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "Cancel Move"
+msgstr "Cancelar Mover"
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "Cancel Stock Move"
+msgstr "Cancelar movimiento de stock"
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__cancel_move
+msgid "Cancel selected stock moves and delete related quants movements."
+msgstr "Cancele los movimientos de stock seleccionados y elimine los movimientos de cuantos relacionados."
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "Delete Move"
+msgstr "Eliminar movimiento"
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "Delete Stock Move"
+msgstr "Eliminar movimiento de stock"
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__delete_move
+msgid "Delete selected stock moves and related quants movements."
+msgstr "Elimina movimientos de stock seleccionados y movimientos de cuantos relacionados."
+
+#. module: stock_move_cancel
+#: model:ir.actions.act_window,name:stock_move_cancel.action_cancel_move
+msgid "Delete/Cancel Move"
+msgstr "Eliminar / Cancelar movimiento"
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: stock_move_cancel
+#: model:ir.model.fields,field_description:stock_move_cancel.field_stock_move_cancel__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: stock_move_cancel
+#: model:ir.model,name:stock_move_cancel.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_move_inherit_picking_cancel_form
+msgid "Set To Draft"
+msgstr "Establecer en borrador"
+
+#. module: stock_move_cancel
+#: model:ir.model,name:stock_move_cancel.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: stock_move_cancel
+#: model:res.groups,name:stock_move_cancel.group_move_cancel
+msgid "Stock Move / Button Cancel"
+msgstr "Movimiento de stock / botón Cancelar"
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "Stock Move Options"
+msgstr "Opciones"
+
+#. module: stock_move_cancel
+#: model:ir.model,name:stock_move_cancel.model_stock_move_cancel
+msgid "Stock move cancel"
+msgstr "Cancelar movimiento de stock"
+
+#. module: stock_move_cancel
+#: model:ir.model,name:stock_move_cancel.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: stock_move_cancel
+#: model_terms:ir.ui.view,arch_db:stock_move_cancel.view_order_merge_form_new_1
+msgid "or"
+msgstr "o"

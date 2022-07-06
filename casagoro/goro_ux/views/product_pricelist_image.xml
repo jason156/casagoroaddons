@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="report_product_pricelist_image" inherit_id="product_pricelist_direct_print.report_product_pricelist_document">
+		<span position="before" t-field="product.display_name">
+			<span  widget="image" t-field="product.image_128" t-options="{'widget': 'image'}"/>
+		</span>
+	</template>
+</odoo>

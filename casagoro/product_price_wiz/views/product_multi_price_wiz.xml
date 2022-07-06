@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_multi_price_wiz_form" model="ir.ui.view">
+        <field name="name">product_multi_price_wiz.form</field>
+        <field name="model">product.multi_price_wiz</field>
+        <field name="arch" type="xml">
+            <form string="description">
+                <header/>
+                <sheet>
+                    <h1>
+                        <field name="domain"  placeholder="Productos" widget="domain" options="{'model': 'product.template', 'in_dialog': true}"/>
+                    </h1>
+                    <group col="6">
+                        <field name="sale_price_percent"/>
+                        <field name="price_round"/>
+                        <field name="price_surcharge"/>
+                        <field name="update_prices"/>
+
+                    </group>
+                    <group>
+                        <span>
+                            <field name="line_ids">
+                                <tree  editable="bottom" string="Pricelist Items">
+                                    <field  options="{'no_create': True}" name="pricelist_id"/>
+                                    <field name="default_percent"/>
+                                    <field name="min_quantity"/>
+                                    <field name="price_round"/>
+                                    <field name="price_surcharge"/>
+                                </tree>
+                            </field>
+                        </span>
+                    </group>
+                    <footer>
+                        <button name="action_set_price" string="Actualizar Precios" type="object"/>
+                        <button class="btn-default" special="cancel" string="Cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_multi_product_price_wiz" model="ir.actions.act_window">
+        <field name="name">price wiz</field>
+        <field name="res_model">product.multi_price_wiz</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem
+        id="Margenes"
+        name="Margenes"
+        action="action_multi_product_price_wiz"
+        parent="purchase.menu_purchase_products"
+        sequence="10"/>
+
+    <record id="action_multi_product_price_wiz_from_list" model="ir.actions.server">
+        <field name="name">Modificar margenes</field>
+        <field name="model_id" ref="product_price_wiz.model_product_multi_price_wiz"/>
+        <field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.action_price_wiz()
+        </field>
+    </record>
+
+
+</odoo>

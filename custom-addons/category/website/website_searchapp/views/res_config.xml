@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sitesearchapp_config_settings_form" model="ir.ui.view">
+            <field name="name">SiteSearchApp Config</field>
+            <field name="model">searchapp.search.config</field>
+            <field name="arch" type="xml">
+                <form string="SiteSearchApp Settings" class="oe_form_configuration">
+                    <header class="col-md-12" style="position:fixed;z-index:10">
+                        <button string="Save" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <div style="height:10px;"></div>
+                    <group string="SiteSearchApp Configuration">
+                        <field name='enable'/>
+                        <field name='host'/>
+                        <field name='api_key'/>
+                        <field name='user'/>
+                        <field name='password' password="True"/>
+                    </group>
+                    <group>
+                        <button string="Test Connection" type="object" name="test_connection"/>
+                    </group>
+                    <div style="height:10px;"></div>
+                    <group string="SiteSearchApp Logging">
+                        <field name='ip_whitelist'/>
+                    </group>
+                    <div style="height:10px;"></div>
+                    <group string="SiteSearchApp Synchronization">
+                        <div>
+                            <button string="Get Indices" type="object" name="get_indices"
+                                    class="oe_highlight oe_inline"/>
+                            <button string="Index Site" type="object" name="index_site" class="oe_highlight oe_inline"/>
+                        </div>
+                    </group>
+
+                    <div style="height:10px;"></div>
+                    <group string="SiteSearchApp Styling">
+                        <group>
+                            <field name="alignment"/>
+                        </group>
+                        <separator/>
+                        <group>
+                            <field name='text_color'/>
+                            <field name='hover_color'/>
+                            <field name='title_color'/>
+                            <field name='price_color'/>
+                            <field name='slash_color'/>
+                        </group>
+                        <group>
+                            <field name='border_color'/>
+                            <field name='loader_color'/>
+                            <field name='title_bg_color'/>
+                            <field name='highlight_color'/>
+                            <field name='bg_color'/>
+                        </group>
+                    </group>
+                    <separator string="Custom CSS Styling"/>
+                    <group name="custom_css">
+                        <field name="custom_css" colspan="6" nolabel="1"
+                               placeholder="Add your custom css here."/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="sitesearchapp_config_settings" model="ir.actions.act_window">
+            <field name="name">Configuration</field>
+            <field name="res_model">searchapp.search.config</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_sitesearchapp_config_settings"
+                  action="sitesearchapp_config_settings"
+                  parent="website_searchapp.sitesearchapp_menu"
+                  sequence="20"
+        />
+    </data>
+</odoo>

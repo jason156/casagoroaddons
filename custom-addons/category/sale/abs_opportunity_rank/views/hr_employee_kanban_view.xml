@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Add two fields for display Rank and Amount in existing model 'hr.employee' kanban view-->
+    <record id="hr_kanban_view_employees_opportunity_inherited" model="ir.ui.view" >
+        <field name="name">hr.employee.kanban</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_kanban_details']" position = 'inside'>
+                <ul groups = "abs_opportunity_rank.group_only_show_opportunity_rank"><strong><label>Opportunity Amount : <field name="amount_opportunity_rank"/></label></strong>
+                </ul>
+                <ul groups = "abs_opportunity_rank.group_only_show_opportunity_rank"><strong><label>Opportunity Rank : <field name="number_opportunity_rank"/></label></strong>
+                </ul>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
+
+

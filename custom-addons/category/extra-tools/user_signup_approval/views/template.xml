@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Signup Form -->
+    <template id="oin_field_oe_signup_form" inherit_id="auth_signup.fields">
+        <xpath expr="//div[1]" position="before">
+            <div class="form-group field-tax-no">
+                <label for="tax_no">Tax Identification Number</label>
+                <input type="text" name="tax_no" t-att-value="tax_no" id="tax_no" class="form-control form-control-sm"
+                    required="required"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+            </div>
+            <div class="form-group field-cust-name">
+                <label for="cust_name">Customer Name</label>
+                <input type="text" name="cust_name" t-att-value="cust_name" id="cust_name" class="form-control form-control-sm"
+                    readonly="readonly"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+            </div>
+        </xpath>
+
+        <xpath expr="//div[4]/label" position="replace">
+            <label for="name">First Name</label>
+        </xpath>
+        <xpath expr="//div[4]" position="after">
+            <div class="form-group field-last-name">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" t-att-value="last_name" id="last_name" class="form-control form-control-sm"
+                    required="required"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+            </div>
+            <div class="form-group field-city">
+                <label for="city">City</label>
+                <input type="text" name="city" t-att-value="city" id="city" class="form-control form-control-sm"
+                    required="required"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+            </div>
+            <div class="form-group field-country">
+                <label for="country_id">Country</label>
+                <select id="country_id" name="country_id" class="form-control form-control-sm">
+                    <option value="">Country...</option>
+                    <t t-foreach="countries" t-as="c">
+                        <option t-att-value="c.id">
+                            <t t-esc="c.name" />
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class="form-group field-phone">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" t-att-value="phone" id="phone" class="form-control form-control-sm"
+                    required="required"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+            </div>
+            <div class="form-group field-company-id-file">
+                <label for="company_id_file">Company ID</label>
+                <input name="company_id_file" id="company_id_file" type="file" class="form-control form-control-sm"
+                   multiple="true" data-show-upload="true" data-show-caption="true"
+                   lass="file" data-show-preview="true"/>
+            </div>
+            <div class="form-group field-letter-intent">
+                <label for="letter_intent">Letter Of Intent</label>
+                <input name="letter_intent" id="letter_intent" type="file" class="form-control form-control-sm"
+                   multiple="true" data-show-upload="true" data-show-caption="true"
+                   lass="file" data-show-preview="true"/>
+            </div>
+            <div class="form-group field-board-resolution">
+                <label for="board_resolution">Board Resolution</label>
+                <input name="board_resolution" id="board_resolution" type="file" class="form-control form-control-sm"
+                   multiple="true" data-show-upload="true" data-show-caption="true"
+                   lass="file" data-show-preview="true"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

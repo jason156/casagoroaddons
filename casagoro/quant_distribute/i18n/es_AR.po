@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_distribute
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200807\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-02 00:21+0000\n"
+"PO-Revision-Date: 2020-12-01 21:23-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__create_uid
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__create_date
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__display_name
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_location__distribute
+#: model_terms:ir.ui.view,arch_db:stock_distribute.view_picking_form
+msgid "Distribute"
+msgstr "Distribuir"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_location__distribute_part
+msgid "Distribute part"
+msgstr "Parte de la distribucion"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__id
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_distribute
+#: model:ir.model,name:stock_distribute.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__items_ids
+msgid "Items"
+msgstr "items"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute____last_update
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación en"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__write_uid
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__write_date
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__loc_name
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__location_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__location_ids
+msgid "Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__move_id
+msgid "Move"
+msgstr "movimiento"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute__picking_id
+msgid "Picking"
+msgstr "Remito"
+
+#. module: stock_distribute
+#: model_terms:ir.ui.view,arch_db:stock_distribute.stock_distribute_form
+msgid "Process"
+msgstr "Procesar"
+
+#. module: stock_distribute
+#: model:ir.model,name:stock_distribute.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: stock_distribute
+#: model:ir.model,name:stock_distribute.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: stock_distribute
+#: model_terms:ir.ui.view,arch_db:stock_distribute.stock_distribute_form
+msgid "description"
+msgstr "descripción"
+
+#. module: stock_distribute
+#: model:ir.actions.act_window,name:stock_distribute.action_stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__distribute_id
+msgid "distribute"
+msgstr "Distribuir"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_picking__distributed
+msgid "distributed"
+msgstr "Distribuido"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__name
+msgid "name"
+msgstr "Nombre"
+
+#. module: stock_distribute
+#: model:ir.model.fields,field_description:stock_distribute.field_stock_distribute_item__qty
+msgid "qty"
+msgstr "cant"
+
+#. module: stock_distribute
+#: model:ir.model,name:stock_distribute.model_stock_distribute_item
+msgid "stock distribute item"
+msgstr ""
+
+#. module: stock_distribute
+#: model:ir.model,name:stock_distribute.model_stock_distribute
+msgid "stock.distribute"
+msgstr ""
